@@ -1,0 +1,186 @@
+/* Premium Footer Styles - Matches Homepage & Sections */
+
+/* --- Reuse Variables --- */
+:root {
+    --primary-gradient: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+    --footer-bg: #0f172a;
+    /* Deep dark blue/slate */
+    --footer-text: #94a3b8;
+    --footer-heading: #f8fafc;
+}
+
+/* --- Footer Structure --- */
+#footer.style-2 {
+    background-color: var(--footer-bg) !important;
+    padding-top: 80px !important;
+    padding-bottom: 30px !important;
+    color: var(--footer-text) !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/* Subtle background pattern/gradient overlay */
+#footer.style-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 10% 90%, rgba(30, 58, 138, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+/* --- Top Section (Logo) --- */
+.footer-top {
+    margin-bottom: 50px !important;
+    padding-bottom: 30px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.footer-logo img {
+    max-height: 50px !important;
+    /* Adjust based on logo needs */
+    width: auto !important;
+}
+
+/* --- Main Grid Layout --- */
+.footer-main {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 40px !important;
+    margin-bottom: 60px !important;
+}
+
+/* Column Styling */
+.footer-col-block .title {
+    color: var(--footer-heading) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin-bottom: 25px !important;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.footer-col-block .title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-gradient);
+    border-radius: 2px;
+}
+
+.footer-col-block .description {
+    line-height: 1.8 !important;
+    color: var(--footer-text) !important;
+    font-size: 15px !important;
+}
+
+/* Links List */
+.footer-main ul li {
+    margin-bottom: 15px !important;
+}
+
+.footer-main ul li a {
+    color: var(--footer-text) !important;
+    font-size: 15px !important;
+    transition: all 0.3s ease !important;
+    display: inline-block;
+    position: relative;
+}
+
+.footer-main ul li a:hover {
+    color: #fff !important;
+    transform: translateX(5px);
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Contact Icons */
+.footer-info li {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+    color: var(--footer-text) !important;
+}
+
+.footer-info li i {
+    color: #3B82F6 !important;
+    /* Secondary Blue */
+    font-size: 18px !important;
+    margin-top: 3px;
+    /* Align with text */
+}
+
+.footer-info li a {
+    color: var(--footer-text) !important;
+}
+
+.footer-info li a:hover {
+    color: #fff !important;
+}
+
+
+/* --- Footer Bottom --- */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding-top: 30px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 14px !important;
+}
+
+.footer-bottom ul.content-right {
+    display: flex !important;
+    gap: 30px !important;
+}
+
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.6) !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer-bottom a:hover {
+    color: #fff !important;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 20px !important;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    .footer-bottom {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+    }
+
+    .footer-col-block .title {
+        margin-bottom: 15px !important;
+    }
+}

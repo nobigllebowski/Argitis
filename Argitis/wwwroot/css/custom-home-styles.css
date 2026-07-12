@@ -1,0 +1,620 @@
+/* Premium Homepage Styles - Full Redesign V3 */
+
+/* --- General Enhancements --- */
+:root {
+    --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --card-hover-transform: translateY(-8px);
+    /* Updated Gradient to match strict brand Blue (#1E3A8A) to Secondary Blue (#3B82F6) */
+    --primary-gradient: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+    --bg-light: #f8fafc;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--bg-light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: -0.02em;
+}
+
+/* =========================================
+   1. HERO SLIDER (Glass Card)
+   ========================================= */
+.page-title-homepage-3 .wrap-content {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 60px 40px !important;
+    border-radius: 24px !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+    max-width: 700px !important;
+    width: 90% !important;
+    /* Ensure responsive width */
+    margin: auto !important;
+    /* Center alignment */
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.page-title-homepage-3 .wrap-content:hover {
+    transform: translateY(-5px) scale(1.01) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.page-title-homepage-3 .heading h2.title {
+    font-size: 58px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 24px !important;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    font-weight: 800 !important;
+    word-wrap: break-word !important;
+    /* Prevent text overflow */
+}
+
+.page-title-homepage-3 .description {
+    font-size: 20px !important;
+    background: transparent !important;
+    padding: 0 !important;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+    margin-bottom: 40px !important;
+    line-height: 1.6 !important;
+    opacity: 0.95 !important;
+    font-weight: 500 !important;
+}
+
+.page-title-homepage-3 .tf-btn {
+    background: #fff !important;
+    color: var(--Primary) !important;
+    font-weight: 700 !important;
+    padding: 18px 45px !important;
+    border-radius: 50px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+    border: none !important;
+    text-transform: uppercase;
+    font-size: 14px !important;
+    letter-spacing: 1px;
+    max-width: 100% !important;
+    /* Prevent button overflow */
+    white-space: normal !important;
+    /* Allow wrapping */
+}
+
+.page-title-homepage-3 .tf-btn span,
+.page-title-homepage-3 .tf-btn i {
+    color: var(--Primary) !important;
+    transition: color 0.3s ease !important;
+    white-space: nowrap !important;
+    /* Keep icon/text together mostly */
+}
+
+.page-title-homepage-3 .tf-btn:hover {
+    background: var(--Secondary) !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) !important;
+}
+
+.page-title-homepage-3 .tf-btn:hover span,
+.page-title-homepage-3 .tf-btn:hover i {
+    color: #fff !important;
+}
+
+/* --- MOBILE RESPONSIVENESS FIXES (Slider) --- */
+@media (max-width: 768px) {
+    .page-title-homepage-3 .wrap-content {
+        padding: 30px 20px !important;
+        width: 95% !important;
+        margin: 0 auto !important;
+        backdrop-filter: blur(8px) !important;
+        border-radius: 16px !important;
+    }
+
+    .page-title-homepage-3 .heading h2.title {
+        font-size: 32px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .page-title-homepage-3 .description {
+        font-size: 16px !important;
+        margin-bottom: 25px !important;
+    }
+
+    /* FIX FOR BUTTON OVERFLOW */
+    .page-title-homepage-3 .tf-btn {
+        padding: 14px 20px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: auto !important;
+        max-width: 100% !important;
+        font-size: 13px !important;
+    }
+
+    .page-title-homepage-3 .tf-btn span {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        white-space: normal !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .page-title-homepage-3 .tf-btn i {
+        display: none !important;
+        /* Hide arrow on small screens if needed to save space */
+    }
+}
+
+
+/* =========================================
+   2. ABOUT SECTION (Modern Asymmetric)
+   ========================================= */
+.section-box-about {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%) !important;
+    position: relative;
+    overflow: hidden !important;
+    /* Prevent horizontal scroll from rotated images */
+}
+
+.box-about {
+    background: #ffffff !important;
+    border-radius: 30px !important;
+    padding: 50px !important;
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(0, 0, 0, 0.02) !important;
+    position: relative !important;
+    z-index: 10 !important;
+    transition: transform 0.3s ease !important;
+}
+
+.box-about:hover {
+    transform: translateY(-5px);
+}
+
+.box-about .heading-section h3 {
+    font-size: 42px !important;
+    font-weight: 800 !important;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    margin-bottom: 25px !important;
+    line-height: 1.2 !important;
+}
+
+.box-about .heading-section .sub {
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px !important;
+    color: var(--Secondary) !important;
+    margin-bottom: 15px !important;
+    display: inline-block;
+}
+
+.wrap-counter {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    margin-top: 45px !important;
+}
+
+.wrap-counter .counter-item {
+    background: #f9fafb !important;
+    padding: 25px 20px !important;
+    border-radius: 20px !important;
+    border: 1px solid #e5e7eb !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    /* Responsive width */
+}
+
+.wrap-counter .counter-item:hover {
+    background: #fff !important;
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+    border-color: var(--Secondary) !important;
+}
+
+.wrap-counter .counter-item .icon {
+    font-size: 38px !important;
+    margin-bottom: 15px !important;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    transition: transform 0.5s ease;
+}
+
+.wrap-counter .counter-item:hover .icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.wrap-counter .counter-item .count .counter-number {
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    color: #111827 !important;
+    line-height: 1 !important;
+    margin-bottom: 8px !important;
+}
+
+.section-box-about .image-wrap {
+    border-radius: 40px !important;
+    overflow: hidden !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2) !important;
+    transform: rotate(3deg) !important;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    border: 8px solid #fff !important;
+    margin-top: 30px;
+}
+
+.section-box-about:hover .image-wrap {
+    transform: rotate(0deg) scale(1.05) !important;
+}
+
+/* Mobile Adjustments (About) */
+@media (max-width: 768px) {
+    .box-about {
+        padding: 30px 20px !important;
+    }
+
+    .box-about .heading-section h3 {
+        font-size: 28px !important;
+    }
+
+    .wrap-counter {
+        grid-template-columns: 1fr !important;
+        /* Stack for mobile */
+    }
+
+    .section-box-about .image-wrap {
+        transform: none !important;
+        margin-top: 40px !important;
+    }
+}
+
+
+/* =========================================
+   3. SERVICES SECTION (Premium Grid)
+   ========================================= */
+.section-service {
+    background: #fff !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+
+.section-service .heading-section h3 {
+    font-weight: 800 !important;
+    color: #111827 !important;
+}
+
+.service-item.style-3 {
+    border-radius: 24px !important;
+    background: #ffffff !important;
+    border: 1px solid #f3f4f6 !important;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    overflow: hidden;
+    height: 100% !important;
+    position: relative;
+    padding-bottom: 25px !important;
+}
+
+.service-item.style-3:hover {
+    transform: translateY(-12px) !important;
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.12) !important;
+    border-color: transparent !important;
+}
+
+.service-item.style-3 .image-wrap {
+    border-radius: 20px !important;
+    margin: 15px 15px 0 15px !important;
+    overflow: hidden;
+    box-shadow: none !important;
+    height: 220px !important;
+}
+
+.service-item.style-3 .image-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.8s ease !important;
+    border-radius: 16px !important;
+}
+
+.service-item.style-3:hover .image-wrap img {
+    transform: scale(1.15) !important;
+}
+
+.service-item.style-3 .content {
+    padding: 25px !important;
+}
+
+.service-item.style-3 .content h5.title {
+    margin-bottom: 15px !important;
+}
+
+.service-item.style-3 .content h5.title a {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+    transition: color 0.3s ease !important;
+}
+
+.service-item.style-3:hover .content h5.title a {
+    color: var(--Primary) !important;
+}
+
+.service-item.style-3 p {
+    color: #6b7280 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Service Button/Link */
+.service-item.style-3 .tf-btn-link {
+    background: #f3f4f6 !important;
+    padding: 10px 20px !important;
+    border-radius: 50px !important;
+    color: #374151 !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    transition: all 0.3s ease !important;
+    position: absolute !important;
+    bottom: 25px;
+    left: 25px;
+}
+
+.service-item.style-3 .tf-btn-link:hover {
+    background: var(--Secondary) !important;
+    color: #fff !important;
+    padding-right: 25px !important;
+}
+
+.service-item.style-3 .tf-btn-link i {
+    margin-left: 5px !important;
+    transition: margin 0.3s ease !important;
+}
+
+.service-item.style-3 .tf-btn-link:hover i {
+    margin-left: 10px !important;
+}
+
+
+/* =========================================
+   4. PROCESS SECTION (Connected Steps)
+   ========================================= */
+.section-process {
+    background-color: #f8fafc !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+
+.process-item.style-no-line .item {
+    background: white !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 20px !important;
+    /* Squircle */
+    border: none !important;
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease !important;
+    margin-right: 25px !important;
+    flex-shrink: 0 !important;
+    /* Prevent shrinking on mobile */
+}
+
+.process-item:hover .item {
+    background: var(--Secondary) !important;
+    transform: rotate(10deg) scale(1.1) !important;
+    box-shadow: 0 20px 40px rgba(var(--Secondary-rgb), 0.3) !important;
+}
+
+.process-item .item i {
+    font-size: 36px !important;
+    color: var(--Primary) !important;
+    transition: all 0.3s ease !important;
+}
+
+.process-item:hover .item i {
+    color: #fff !important;
+}
+
+.process-item .item .number {
+    top: -10px !important;
+    right: -10px !important;
+    width: 32px !important;
+    height: 32px !important;
+    background: var(--Primary) !important;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-weight: 700 !important;
+    font-size: 14px !important;
+}
+
+.process-item .content h5.title a {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+}
+
+.process-item .content p {
+    color: #4b5563 !important;
+}
+
+
+/* =========================================
+   5. TESTIMONIALS (Clean Cards)
+   ========================================= */
+.section-testimonials {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    background: #fff !important;
+}
+
+.wg-testimonial.style-text-center {
+    background: #ffffff !important;
+    border-radius: 24px !important;
+    padding: 60px 40px !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid #f3f4f6 !important;
+    margin: 30px 15px !important;
+    position: relative !important;
+}
+
+.wg-testimonial.style-text-center::before {
+    content: '"';
+    font-family: serif;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 120px;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.03);
+    pointer-events: none;
+}
+
+.wg-testimonial .rating {
+    background: #fffbf0;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+.wg-testimonial .rating i {
+    color: #FBBF24 !important;
+    font-size: 16px;
+    margin: 0 2px;
+}
+
+.wg-testimonial .content .text {
+    font-size: 18px !important;
+    line-height: 1.8 !important;
+    color: #374151 !important;
+    font-style: normal !important;
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+}
+
+.wg-testimonial .info h6.title a {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+}
+
+.wg-testimonial .info p {
+    color: var(--Secondary) !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   6. CONTACT FORM & FAQ
+   ========================================= */
+.box-contact {
+    border-radius: 30px !important;
+    overflow: hidden !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1) !important;
+}
+
+.form-consultation {
+    background: #fff !important;
+    border-radius: 30px !important;
+    padding: 50px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.form-consultation input.tf-input,
+.form-consultation textarea {
+    background-color: #f9fafb !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    padding: 18px 25px !important;
+    font-size: 16px !important;
+}
+
+.form-consultation input.tf-input:focus,
+.form-consultation textarea:focus {
+    background-color: #fff !important;
+    border-color: var(--Primary) !important;
+    box-shadow: 0 0 0 4px rgba(var(--Primary-rgb), 0.1) !important;
+}
+
+.form-consultation button[type="submit"] {
+    width: 100% !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    background: var(--primary-gradient) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 20px rgba(var(--Primary-rgb), 0.2) !important;
+}
+
+.form-consultation button[type="submit"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 15px 30px rgba(var(--Primary-rgb), 0.3) !important;
+}
+
+/* Accordion */
+.tf-accordion-item {
+    border: none !important;
+    background: #fff !important;
+    border-radius: 16px !important;
+    margin-bottom: 15px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02) !important;
+    border-left: 4px solid transparent !important;
+}
+
+.tf-accordion-item:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+    transform: translateX(5px);
+    border-left-color: var(--Secondary) !important;
+}
+
+.accordion-header .title {
+    padding: 25px 30px !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    color: #1f2937 !important;
+}
+
+.accordion-header .title:not(.collapsed) {
+    color: var(--Primary) !important;
+}
+
+/* Mobile Adjustments (General) */
+@media (max-width: 768px) {
+
+    .section-service,
+    .section-process,
+    .section-testimonials {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .form-consultation {
+        padding: 30px 20px !important;
+    }
+
+    .wg-testimonial.style-text-center {
+        padding: 40px 25px !important;
+    }
+}
