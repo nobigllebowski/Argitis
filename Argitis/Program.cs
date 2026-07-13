@@ -1,7 +1,16 @@
+using Argitis.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Регистрация EmailSettings
+var emailSettings = builder.Configuration.GetSection("EmailSettings").Get<EmailSettings>();
+builder.Services.AddSingleton(emailSettings!);
+
+// Регистрация EmailService
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 var app = builder.Build();
 

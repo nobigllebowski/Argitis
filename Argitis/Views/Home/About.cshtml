@@ -1,0 +1,221 @@
+﻿@model Argitis.Models.AboutViewModel
+
+@{
+    ViewData["Title"] = Model.Title;
+    ViewData["MetaDescription"] = Model.MetaDescription;
+    ViewData["MetaKeywords"] = Model.MetaKeywords;
+}
+
+<!-- .page-title -->
+<div class="page-title">
+    <div class="tf-container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="title">О нас</h3>
+                <ul class="breadcrumbs">
+                    <li><a href="/">Главная</a></li>
+                    <li>О нас</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> <!-- /.page-title -->
+<!-- .main-content -->
+<div class="main-content-2">
+
+    <!-- .section-box-about -->
+    <div class="section-box-about page-about">
+        <div class="tf-container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading-section">
+                        <h2 class="wow fadeInUp" data-wow-duration="1000" data-wow-delay="0s">
+                            @Model.Heading
+                        </h2>
+                        <p class="description text-1 lh-30 wow fadeInUp" data-wow-duration="1000" data-wow-delay="0s">
+                            @Model.Description
+                        </p>
+                    </div>
+                    <div class="box-about">
+                        <div class="image-wrap wow fadeInUp" data-wow-duration="1000" data-wow-delay="0s">
+                            <img class="lazyload" data-src="/images/sliders-1.webp" src="/images/sliders-1.webp" alt="">
+                        </div>
+                        <div class="wrap-content">
+                            <div class="item wow fadeInLeft" data-wow-duration="1000" data-wow-delay="0s">
+                                <h3>@Model.MissionTitle</h3>
+                                <p>@Model.MissionText</p>
+                            </div>
+                            <div class="item wow fadeInRight" data-wow-duration="1000" data-wow-delay="0s">
+                                <h3>@Model.VisionTitle</h3>
+                                <p>@Model.VisionText</p>
+                            </div>
+                        </div>
+                        <div class="wrap-counter">
+                            <div class="counter-item has-icon">
+                                <div class="icon">
+                                    <i class="icon-SketchLogo"></i>
+                                </div>
+                                <div class="count">
+                                    <div class="counter-number">
+                                        <div class="odometer style-1-1" data-value="@Model.ExperienceYears">0</div>
+                                        <span class="sub">Лет</span>
+                                    </div>
+                                    <p>Лет опыта</p>
+                                </div>
+                            </div>
+                            <div class="counter-item has-icon">
+                                <div class="icon">
+                                    <i class="icon-Smiley"></i>
+                                </div>
+                                <div class="count">
+                                    <div class="counter-number">
+                                        <div class="odometer style-1-2" data-value="@(Model.HappyClients / 1000)">0</div>
+                                        <span class="sub">k</span>
+                                    </div>
+                                    <p>Довольных клиентов</p>
+                                </div>
+                            </div>
+                            <div class="counter-item has-icon">
+                                <div class="icon">
+                                    <i class="icon-HandHeart"></i>
+                                </div>
+                                <div class="count">
+                                    <div class="counter-number">
+                                        <div class="odometer style-1-3" data-value="@Model.Reviews">0</div>
+                                    </div>
+                                    <p>Отзывов клиентов</p>
+                                </div>
+                            </div>
+                            <div class="counter-item has-icon">
+                                <div class="icon">
+                                    <i class="icon-Certificate"></i>
+                                </div>
+                                <div class="count">
+                                    <div class="counter-number">
+                                        <div class="odometer style-1-4" data-value="@Model.Awards">0</div>
+                                    </div>
+                                    <p>Наград</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.section-box-about -->
+    <!-- .section-team (закомментировано в оригинале) -->
+    <section class="section-team tf-spacing-5">
+        <div class="tf-container">
+            <!-- Секция команды закомментирована -->
+        </div>
+    </section><!-- /.section-team -->
+    <!-- .section-testimonials -->
+    <section class="section-testimonials page-about bg-1 tf-spacing-1">
+        <div class="heading-section">
+            <p class="text-2 sub">ОТЗЫВЫ КЛИЕНТОВ</p>
+            <h3>Что говорят наши довольные клиенты</h3>
+            <p class="description text-1 lh-30"></p>
+        </div>
+        <div class="swiper-container slider-testimonial-center">
+            <div class="swiper-wrapper">
+                @foreach (var testimonial in Model.Testimonials)
+                {
+                    <div class="swiper-slide">
+                        <div class="wg-testimonial style-text-center">
+                            <div class="rating">
+                                <i class="icon-favorite_major"></i>
+                                <i class="icon-favorite_major"></i>
+                                <i class="icon-favorite_major"></i>
+                                <i class="icon-favorite_major"></i>
+                                <i class="icon-favorite_major"></i>
+                            </div>
+                            <div class="content">
+                                <p class="text text-1 lh-30 fw-4 mb-16">
+                                    "@testimonial.Quote"
+                                </p>
+                                <div class="bot">
+                                    <div class="info">
+                                        <h6 class="title">
+                                            <a href="#">@testimonial.Author</a>
+                                        </h6>
+                                        <p>@testimonial.Role</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section><!-- /.section-testimonials -->
+    <!-- .section-faq -->
+    <section class="section-faq tf-spacing-3">
+        <div class="tf-container">
+            <div class="row justify-center">
+                <div class="col-md-8">
+                    <div class="heading-section">
+                        <p class="text-2 sub">Почему выбирают нас?</p>
+                        <h3>Гибкие решения по финансированию для ваших потребностей!</h3>
+                        <p class="description text-1 lh-30">
+                            Мы специализируемся на финансовых услугах в разных регионах мира, где существует потребность.
+                        </p>
+                    </div>
+                    <div class="tf-accordion" id="accordion">
+                        @for (int i = 0; i < Model.FaqItems.Count; i++)
+                        {
+                            var item = Model.FaqItems[i];
+                            var collapseId = $"collapse{i + 1}";
+                            var isExpanded = item.IsExpanded ? "show" : "";
+                            var expandedAttr = item.IsExpanded ? "true" : "false";
+
+                            <div class="tf-accordion-item">
+                                <div class="accordion-header">
+                                    <h5 class="title @(item.IsExpanded ? "" : "collapsed")" data-bs-toggle="collapse" data-bs-target="#@collapseId" aria-expanded="@expandedAttr" aria-controls="@collapseId">
+                                        @item.Question
+                                        <span class="icon"></span>
+                                    </h5>
+                                </div>
+                                <div id="@collapseId" class="accordion-collapse collapse @isExpanded" data-bs-parent="#accordion">
+                                    <div class="tf-accordion-body">
+                                        <p>@item.Answer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- /.section-faq -->
+    <!-- .section-cta -->
+    <section class="section-cta">
+        <div class="tf-container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wrap-content bg-1">
+                        <div class="box-cta">
+                            <div class="heading-section text-start wow fadeInUp" data-wow-duration="1000" data-wow-delay="0s">
+                                <p class="text-2 sub wow fadeInUp" data-wow-duration="1000" data-wow-delay="0s">
+                                    Готовы реализовать свои проекты?
+                                </p>
+                                <h3 class="wow fadeInUp" data-wow-duration="1000" data-wow-delay="0s">
+                                    Воспользуйтесь нашими решениями по финансированию.
+                                </h3>
+                                <p class="description text-1 lh-30 wow fadeInUp" data-wow-duration="1000" data-wow-delay="0s">
+                                    Мы помогаем вам найти подходящее решение по финансированию. Мы здесь, чтобы поддержать вас.
+                                </p>
+                            </div>
+                            <a class="tf-btn style-default btn-color-secondary pd-28 wow fadeInUp" data-wow-duration="1000" data-wow-delay="0s" href="/Home/Appointment">
+                                <span>Запросить кредит <i class="icon-ArrowRight arr-1"></i></span>
+                            </a>
+                        </div>
+                        <div class="image-wrap wow fadeInRight" data-wow-duration="1000" data-wow-delay="0s">
+                            <img class="lazyload" data-src="~/images/ask.jpg" src="~/images/ask.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- /.section-cta -->
+
+</div><!-- /.main-content -->

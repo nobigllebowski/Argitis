@@ -1,0 +1,74 @@
+﻿@model Argitis.Models.ContactViewModel
+
+@{
+    ViewData["Title"] = Model.Title;
+    ViewData["MetaDescription"] = Model.MetaDescription;
+}
+
+
+<div class="main-content page-contact">
+    <!-- Карта и контактная информация (из ContactViewModel) -->
+    <div class="map-box relative">
+        <img src="/images/contact.webp" alt="Карта" class="w-100 h-100 object-fit-cover">
+    </div>
+
+    <section class="section-contact page-contact">
+        <div class="tf-container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wrap-content">
+                        <div class="box-contact">
+                            <div class="heading-section text-start">
+                                <p class="text-2 sub">Контакты</p>
+                                <h3>Свяжитесь с GROUPE-ARGITIS</h3>
+                                <p class="description text-1 lh-30">
+                                    Мы всегда готовы помочь вашему бизнесу. Давайте поговорим вместе.
+                                </p>
+                            </div>
+                            <ul class="list-info">
+                                <li><i class="icon-Envelope"></i> <a href="mailto:@Model.Email">@Model.Email</a></li>
+                                <li><i class="icon-PhoneCall"></i> <a href="tel:@Model.Phone">@Model.Phone</a></li>
+                                <li><i class="icon-MapPin"></i> @Model.Address</li>
+                            </ul>
+                        </div>
+
+                        <!-- ФОРМА: здесь НЕТ asp-for, только name="" -->
+                        <form class="form-consultation" method="post" asp-action="Contact" id="contactform">
+                            @Html.AntiForgeryToken()
+
+                            @if (TempData["SuccessMessage"] != null)
+                            {
+                                <div class="message-alert alert alert-success alert-dismissible fade show" role="alert">
+                                    <i class="fa fa-check-circle"></i> @TempData["SuccessMessage"]
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            }
+
+                            <h4 class="mb-20 text-center">Напишите нам</h4>
+
+                            <fieldset class="name">
+                                <input type="text" name="Name" class="tf-input style-1" placeholder="Ваше полное имя*" required>
+                            </fieldset>
+
+                            <fieldset class="email">
+                                <input type="email" name="Email" class="tf-input style-1" placeholder="Ваш email*" required>
+                            </fieldset>
+
+                            <fieldset class="phone">
+                                <input type="tel" name="Phone" class="tf-input style-1" placeholder="Ваш телефон*" required>
+                            </fieldset>
+
+                            <fieldset class="message">
+                                <textarea name="Message" class="tf-input" rows="4" placeholder="Ваше сообщение*" required></textarea>
+                            </fieldset>
+
+                            <button class="tf-btn style-default btn-color-secondary pd-40 boder-8" type="submit">
+                                <span>Отправить сообщение</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
