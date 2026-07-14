@@ -1,8 +1,11 @@
-﻿@model Argitis.Models.ThankYouViewModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@model Argitis.Models.ThankYouViewModel
 
 @{
-    ViewData["Title"] = "Thank-you - GROUPE-ARGITIS";
-    ViewData["MetaDescription"] = "We specialize in financial services for individuals and professionals.";
+    ViewData["Title"] = $"{Localizer["ThankYouPageTitle"]} - VeltisGroup";
+    ViewData["MetaDescription"] = Localizer["ThankYouMetaDescription"];
     ViewData["MetaKeywords"] = "Finance, Loan, Personal loan, Home loan, Mortgage Loan, Auto Credit, Mortgage Credit, Education Financing, Loan information, Requested amount";
 }
 
@@ -277,45 +280,45 @@
                         </div>
 
                         <!-- Titre de succès -->
-                        <h1 class="thank-you-title mb-4">Спасибо за вашу заявку!</h1>
+                        <h1 class="thank-you-title mb-4">@Localizer["ThankYouTitle"]</h1>
 
                         <!-- Message de confirmation -->
                         <p class="thank-you-message mb-5">
-                            Ваша заявка успешно получена. Мы свяжемся с вами в ближайшее время.
+                            @Localizer["ThankYouMessage"]
                         </p>
 
                         <!-- Informations de la demande -->
                         <div class="request-details mb-5">
-                            <h3 class="details-title mb-4">Детали вашей заявки</h3>
+                            <h3 class="details-title mb-4">@Localizer["DetailsTitle"]</h3>
 
                             <div class="details-grid">
                                 <div class="detail-item">
-                                    <span class="detail-label">ID заявки</span>
+                                    <span class="detail-label">@Localizer["RequestIdLabel"]</span>
                                     <span class="detail-value">@Model.RequestId</span>
                                 </div>
 
                                 <div class="detail-item">
-                                    <span class="detail-label">Имя клиента</span>
+                                    <span class="detail-label">@Localizer["ClientNameLabel"]</span>
                                     <span class="detail-value">@Model.ClientName</span>
                                 </div>
 
                                 <div class="detail-item">
-                                    <span class="detail-label">Сумма</span>
+                                    <span class="detail-label">@Localizer["AmountLabel"]</span>
                                     <span class="detail-value">@Model.FormattedAmount</span>
                                 </div>
 
                                 <div class="detail-item">
-                                    <span class="detail-label">Срок</span>
+                                    <span class="detail-label">@Localizer["TermLabel"]</span>
                                     <span class="detail-value">@Model.FormattedPeriod</span>
                                 </div>
 
                                 <div class="detail-item">
-                                    <span class="detail-label">Ежемесячный платеж</span>
+                                    <span class="detail-label">@Localizer["MonthlyPaymentLabel"]</span>
                                     <span class="detail-value">@Model.FormattedMonthlyPayment</span>
                                 </div>
 
                                 <div class="detail-item">
-                                    <span class="detail-label">Всего к возврату</span>
+                                    <span class="detail-label">@Localizer["TotalRepaymentLabel"]</span>
                                     <span class="detail-value">@Model.FormattedTotalAmount</span>
                                 </div>
                             </div>
@@ -323,30 +326,30 @@
 
                         <!-- Prochaines étapes -->
                         <div class="next-steps mb-5">
-                            <h3 class="next-steps-title mb-4">Следующие шаги</h3>
+                            <h3 class="next-steps-title mb-4">@Localizer["NextStepsTitle"]</h3>
 
                             <div class="steps-list">
                                 <div class="step-item">
                                     <div class="step-number">1</div>
                                     <div class="step-content">
-                                        <h4>Проверка вашей заявки</h4>
-                                        <p>Наша команда изучает вашу заявку и проверяет предоставленную информацию.</p>
+                                        <h4>@Localizer["Step1Title"]</h4>
+                                        <p>@Localizer["Step1Desc"]</p>
                                     </div>
                                 </div>
 
                                 <div class="step-item">
                                     <div class="step-number">2</div>
                                     <div class="step-content">
-                                        <h4>Контакт в течение 24 часов</h4>
-                                        <p>Мы свяжемся с вами по телефону или email для подтверждения деталей.</p>
+                                        <h4>@Localizer["Step2Title"]</h4>
+                                        <p>@Localizer["Step2Desc"]</p>
                                     </div>
                                 </div>
 
                                 <div class="step-item">
                                     <div class="step-number">3</div>
                                     <div class="step-content">
-                                        <h4>Подтверждение заявки</h4>
-                                        <p>После подтверждения мы вышлем вам официальное подтверждение.</p>
+                                        <h4>@Localizer["Step3Title"]</h4>
+                                        <p>@Localizer["Step3Desc"]</p>
                                     </div>
                                 </div>
                             </div>
@@ -354,7 +357,7 @@
 
                         <!-- Informations de contact -->
                         <div class="contact-info mb-5">
-                            <h3 class="contact-title mb-4">Наши контакты</h3>
+                            <h3 class="contact-title mb-4">@Localizer["OurContactsTitle"]</h3>
 
                             <div class="contact-details">
                                 <div class="contact-item">
@@ -364,7 +367,7 @@
 
                                 <div class="contact-item">
                                     <i class="icon-Envelope"></i>
-                                    <span>contact@groupeargitis.com</span>
+                                    <span>contact@veltisgroup.com</span>
                                 </div>
 
                                 <div class="contact-item">
@@ -377,11 +380,11 @@
                         <!-- Boutons d'action -->
                         <div class="action-buttons">
                             <a href="/" class="tf-btn style-default btn-color-secondary pd-40 boder-8">
-                                <span>Вернуться на главную</span>
+                                <span>@Localizer["BackToHome"]</span>
                             </a>
 
                             <a href="/Home/Contact" class="tf-btn style-default btn-color-white has-boder pd-40 boder-8">
-                                <span>Связаться с нами</span>
+                                <span>@Localizer["ContactUs"]</span>
                             </a>
                         </div>
 
