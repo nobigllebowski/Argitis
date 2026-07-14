@@ -649,3 +649,60 @@ h6 {
     mix-blend-mode: normal !important; /* Отключаем смешивание */
     filter: brightness(0) invert(1); /* Добавляем безопасный фильтр, чтобы гарантировать белый цвет */
 }
+
+/* Добавляем красивые отступы внутри контактного блока */
+.box-contact {
+    padding: 30px !important; /* Отступ со всех сторон по 30px */
+}
+
+    /* Дополнительно: чтобы текст не прилипал к иконкам */
+    .box-contact .list-info li {
+        padding: 12px 15px !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Если нужно отодвинуть заголовок от края */
+    .box-contact .heading-section {
+        padding-right: 20px !important;
+    }
+
+.box-contact {
+    padding: 35px 30px 30px 30px !important;
+}
+
+/* ============================================================ */
+/*  FIX: Отступы и выравнивание в аккордеоне (FAQ)              */
+/* ============================================================ */
+
+/* 1. Внутренние отступы для всей карточки вопроса */
+.tf-accordion-item {
+    padding: 25px 30px !important;
+    margin-bottom: 15px !important;
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+}
+
+    /* 2. Отодвигаем заголовок от иконки (чтобы текст не наезжал) */
+    .tf-accordion-item .accordion-header .title {
+        padding-right: 40px !important;
+        font-size: 18px !important;
+    }
+
+    /* 3. Выравниваем иконку (чтобы она была ровно по центру справа) */
+    .tf-accordion-item .accordion-header .icon {
+        right: 15px !important; /* Отступ от правого края */
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+
+    /* 4. Отступы для текста ответа (когда открыт) */
+    .tf-accordion-item .tf-accordion-body {
+        padding: 15px 0 5px 0 !important;
+    }
+
+        .tf-accordion-item .tf-accordion-body p {
+            line-height: 1.6 !important;
+            color: #555 !important;
+            margin: 0 !important;
+        }
