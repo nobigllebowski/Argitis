@@ -1,7 +1,12 @@
-﻿<div class="offcanvas offcanvas-start mobile-nav-wrap" tabindex="-1" id="menu-mobile" aria-labelledby="menu-mobile">
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<div class="offcanvas offcanvas-start mobile-nav-wrap" tabindex="-1" id="menu-mobile" aria-labelledby="menu-mobile">
     <div class="offcanvas-header top-nav-mobile">
         <div class="offcanvas-title">
-            <a href="/"><img src="~/images/logo@2x.png" alt=""></a>
+            <a href="/">
+                <img src="~/images/logo@2x.png" alt="VeltisGroup">
+            </a>
         </div>
         <div data-bs-dismiss="offcanvas" aria-label="Close">
             <i class="icon-close"></i>
@@ -11,31 +16,35 @@
         <div class="mb-body">
             <ul id="menu-mobile-menu">
                 <li class="menu-item">
-                    <a href="/" class="tem-menu-mobile">Главная</a>
+                    <a href="/" class="tem-menu-mobile">@Localizer["Home"]</a>
                 </li>
                 <li class="menu-item">
-                    <a href="/Home/About" class="tem-menu-mobile">О нас</a>
+                    <a href="/Home/About" class="tem-menu-mobile">@Localizer["About"]</a>
                 </li>
                 <li class="menu-item">
-                    <a href="/Home/Services" class="tem-menu-mobile">Наши услуги</a>
+                    <a href="/Home/Services" class="tem-menu-mobile">@Localizer["Services"]</a>
                 </li>
                 <li class="menu-item">
-                    <a href="/Home/Contact" class="tem-menu-mobile">Контакты</a>
+                    <a href="/Home/Contact" class="tem-menu-mobile">@Localizer["Contact"]</a>
                 </li>
                 <li class="menu-item">
-                    <a href="/Home/Appointment" class="tem-menu-mobile">Запросить кредит</a>
+                    <a href="/Home/Appointment" class="tem-menu-mobile">@Localizer["RequestCredit"]</a>
                 </li>
             </ul>
             <div class="support">
-                <a href="#" class="text-need">Нужна помощь?</a>
+                <a href="#" class="text-need">@Localizer["NeedHelp"]</a>
                 <ul class="mb-info">
-                    <li>Позвоните нам сейчас: <span class="number">+34 610-340-344</span></li>
-                    <li>Поддержка 24/7: <a href="mailto:contact@groupeargitis.com">contact@groupeargitis.com</a></li>
+                    <li>@Localizer["CallUsNow"]: <span class="number">+34 610-340-344</span></li>
+                    <li>@Localizer["Support247"]: <a href="mailto:contact@veltisgroup.com">contact@veltisgroup.com</a></li>
                 </ul>
                 <div class="mobile-social mt-3">
-                    <p class="description">Они доверяют нам и делятся своим опытом! Ознакомьтесь с их отзывами и следите за нами в социальных сетях</p>
+                    <p class="description">@Localizer["MobileSocialDesc"]</p>
                     <ul class="tf-social-mobile">
-                        <li><a href="https://" target="_blank" aria-label="Facebook"><img src="~/images/facebook.png" alt="Facebook" width="20" height="20"></a></li>
+                        <li>
+                            <a href="https://" target="_blank" aria-label="Facebook">
+                                <img src="~/images/facebook.png" alt="Facebook" width="20" height="20">
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

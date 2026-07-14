@@ -4,56 +4,53 @@ namespace Argitis.Models
 {
     public class LoanRequest
     {
-        [Display(Name = "Желаемая сумма")]
-        [Required(ErrorMessage = "Введите желаемую сумму")]
-        [Range(1000, 1000000, ErrorMessage = "Сумма должна быть от 1000 до 1 000 000")]
+        [Display(Name = "Desired amount")]
+        [Required(ErrorMessage = "Please enter the desired amount.")]
+        [Range(1000, 1000000, ErrorMessage = "The amount must be between 1000 and 1,000,000.")]
         public decimal Amount { get; set; }
 
-        [Display(Name = "Валюта")]
-        [Required(ErrorMessage = "Выберите валюту")]
+        [Display(Name = "Currency")]
+        [Required(ErrorMessage = "Please select a currency.")]
         public string Currency { get; set; } = "EUR";
 
-        [Display(Name = "Срок (месяцев)")]
-        [Required(ErrorMessage = "Введите срок кредита")]
-        [Range(1, 360, ErrorMessage = "Срок от 1 до 360 месяцев")]
+        [Display(Name = "Term (months)")]
+        [Required(ErrorMessage = "Please enter the loan term.")]
+        [Range(1, 360, ErrorMessage = "The term must be between 1 and 360 months.")]
         public int Period { get; set; }
 
-        [Display(Name = "Фамилия и имя")]
-        [Required(ErrorMessage = "Введите ваше имя")]
-        [StringLength(100, ErrorMessage = "Максимум 100 символов")]
+        [Display(Name = "First and last name")]
+        [Required(ErrorMessage = "Please enter your name.")]
+        [StringLength(100, ErrorMessage = "Maximum 100 characters allowed.")]
         public string Name { get; set; } = "";
 
-        [Display(Name = "Телефон")]
-        [Required(ErrorMessage = "Введите номер телефона")]
-        [Phone(ErrorMessage = "Введите корректный номер")]
+        [Display(Name = "Phone")]
+        [Required(ErrorMessage = "Please enter your phone number.")]
+        [Phone(ErrorMessage = "Please enter a valid phone number.")]
         public string Phone { get; set; } = "";
 
-        [Display(Name = "Полный адрес")]
-        [Required(ErrorMessage = "Введите ваш адрес")]
+        [Display(Name = "Full address")]
+        [Required(ErrorMessage = "Please enter your address.")]
         public string Address { get; set; } = "";
 
         [Display(Name = "E-mail")]
-        [Required(ErrorMessage = "Введите email")]
-        [EmailAddress(ErrorMessage = "Введите корректный email")]
+        [Required(ErrorMessage = "Please enter your e-mail.")]
+        [EmailAddress(ErrorMessage = "Please enter a valid e-mail address.")]
         public string Email { get; set; } = "";
 
-        [Display(Name = "Подтверждение E-mail")]
-        [Required(ErrorMessage = "Подтвердите email")]
-        [Compare("Email", ErrorMessage = "Email и подтверждение не совпадают")]
+        [Display(Name = "Confirm E-mail")]
+        [Required(ErrorMessage = "Please confirm your e-mail.")]
+        [Compare("Email", ErrorMessage = "The e-mail and confirmation do not match.")]
         public string EmailConfirm { get; set; } = "";
 
-        [Display(Name = "Страна проживания")]
-        [Required(ErrorMessage = "Выберите страну")]
+        [Display(Name = "Country of residence")]
+        [Required(ErrorMessage = "Please select a country.")]
         public string Country { get; set; } = "";
 
-        [Display(Name = "Согласие с условиями")]
-        [Required(ErrorMessage = "Вы должны принять условия")]
-        public string Agree { get; set; } = ""; // строка, не bool!
+        [Display(Name = "Agree to terms")]
+        [Required(ErrorMessage = "You must accept the terms and conditions.")]
+        public string Agree { get; set; } = "";
 
-        // Дата создания заявки
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-
-        // Статус (для администратора)
         public string Status { get; set; } = "Новая";
     }
 }

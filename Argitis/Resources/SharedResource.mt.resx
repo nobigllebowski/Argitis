@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Amount" xml:space="preserve"><value>Ammont mixtieq</value></data>
+	<data name="Currency" xml:space="preserve"><value>Munita</value></data>
+	<data name="Period" xml:space="preserve"><value>Terminu (xhur)</value></data>
+	<data name="Name" xml:space="preserve"><value>L-ewwel u l-kunjom</value></data>
+	<data name="Phone" xml:space="preserve"><value>Telefon</value></data>
+	<data name="Address" xml:space="preserve"><value>Indirizz sħiħ</value></data>
+	<data name="Email" xml:space="preserve"><value>E-mail</value></data>
+	<data name="EmailConfirm" xml:space="preserve"><value>Ikkonferma l-e-mail</value></data>
+	<data name="Country" xml:space="preserve"><value>Pajjiż ta' residenza</value></data>
+	<data name="Agree" xml:space="preserve"><value>Naċċetta t-termini</value></data>
+	<data name="AmountRequired" xml:space="preserve"><value>Jekk jogħġbok daħħal l-ammont mixtieq.</value></data>
+	<data name="AmountRange" xml:space="preserve"><value>L-ammont irid ikun bejn 1000 u 1 000 000.</value></data>
+	<data name="CurrencyRequired" xml:space="preserve"><value>Jekk jogħġbok agħżel munita.</value></data>
+	<data name="PeriodRequired" xml:space="preserve"><value>Jekk jogħġbok daħħal it-terminu tas-self.</value></data>
+	<data name="PeriodRange" xml:space="preserve"><value>It-terminu irid ikun bejn 1 u 360 xhur.</value></data>
+	<data name="NameRequired" xml:space="preserve"><value>Jekk jogħġbok daħħal ismek.</value></data>
+	<data name="NameLength" xml:space="preserve"><value>Massimu ta' 100 karattru permess.</value></data>
+	<data name="PhoneRequired" xml:space="preserve"><value>Jekk jogħġbok daħħal in-numru tat-telefon tiegħek.</value></data>
+	<data name="PhoneInvalid" xml:space="preserve"><value>Jekk jogħġbok daħħal numru tat-telefon validu.</value></data>
+	<data name="AddressRequired" xml:space="preserve"><value>Jekk jogħġbok daħħal l-indirizz tiegħek.</value></data>
+	<data name="EmailRequired" xml:space="preserve"><value>Jekk jogħġbok daħħal l-e-mail tiegħek.</value></data>
+	<data name="EmailInvalid" xml:space="preserve"><value>Jekk jogħġbok daħħal indirizz e-mail validu.</value></data>
+	<data name="EmailConfirmRequired" xml:space="preserve"><value>Jekk jogħġbok ikkonferma l-e-mail tiegħek.</value></data>
+	<data name="EmailConfirmCompare" xml:space="preserve"><value>L-e-mail u l-konferma ma jaqblux.</value></data>
+	<data name="CountryRequired" xml:space="preserve"><value>Jekk jogħġbok agħżel pajjiż.</value></data>
+	<data name="AgreeRequired" xml:space="preserve"><value>Irrid taċċetta t-termini u l-kundizzjonijiet.</value></data>
+</root>

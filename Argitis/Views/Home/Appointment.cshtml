@@ -1,14 +1,16 @@
-﻿@model Argitis.Models.LoanRequest
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@model Argitis.Models.LoanRequest
 
 @{
-    ViewData["Title"] = "Appointment - GROUPE-ARGITIS";
-    ViewData["MetaDescription"] = "Заполните форму заявки на кредит онлайн.";
+    ViewData["Title"] = $"{Localizer["AppointmentPageTitle"]} - VeltisGroup";
+    ViewData["MetaDescription"] = Localizer["AppointmentMetaDescription"];
     ViewData["MetaKeywords"] = "Finance, Loan, Personal loan, Home loan, Mortgage Loan, Auto Credit, Mortgage Credit, Education Financing, Loan information, Requested amount";
 }
 
 @section Styles {
     <style>
-        /* Стили из вашего HTML */
         .appointment-info {
             background: #f8f9fa;
             padding: 25px;
@@ -390,10 +392,18 @@
                 <div class="col-12">
                     <div class="wrap-content">
 
+                        @if (TempData["SuccessMessageKey"] != null)
+                        {
+                            <div class="message-alert alert alert-success alert-dismissible fade show" role="alert">
+                                <i class="fa fa-check-circle"></i> @Localizer[TempData["SuccessMessageKey"].ToString()]
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        }
+
                         @if (!ViewData.ModelState.IsValid)
                         {
                             <div class="message-alert alert alert-danger alert-dismissible fade show" role="alert">
-                                <i class="fa fa-exclamation-circle"></i> Пожалуйста, исправьте ошибки в форме.
+                                <i class="fa fa-exclamation-circle"></i> @Localizer["FixErrors"]
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         }
@@ -402,20 +412,20 @@
                             @Html.AntiForgeryToken()
 
                             <div class="heading-section text-start">
-                                <h3>Форма заявки на кредит</h3>
+                                <h3>@Localizer["AppointmentFormTitle"]</h3>
                                 <p class="description text-1">
-                                    Наш сайт использует несколько мер безопасности для защиты ваших личных данных в любое время.
+                                    @Localizer["AppointmentFormDesc"]
                                 </p>
                             </div>
 
                             <div class="cols mb-20">
                                 <fieldset class="amount">
-                                    <input type="number" asp-for="Amount" id="amount" class="tf-input style-1" placeholder="Желаемая сумма" value="@Model.Amount" tabindex="2" aria-required="true" required>
+                                    <input type="number" asp-for="Amount" id="amount" class="tf-input style-1" placeholder="@Localizer["AmountPlaceholder"]" value="@Model.Amount" tabindex="2" aria-required="true" required>
                                     <span asp-validation-for="Amount" class="text-danger"></span>
                                 </fieldset>
                                 <div class="select-custom">
                                     <select asp-for="Currency" id="currency" class="tf-select" data-default="">
-                                        <option disabled selected value="---">Выберите валюту</option>
+                                        <option disabled selected value="---">@Localizer["SelectCurrency"]</option>
                                         <option value="EUR">€ EUR</option>
                                         <option value="CHF">₣ CHF</option>
                                         <option value="USD">$ USD</option>
@@ -428,33 +438,33 @@
 
                             <div class="cols mb-20">
                                 <fieldset class="period">
-                                    <input type="text" asp-for="Period" id="period" class="tf-input style-1" placeholder="Срок (месяцев)" tabindex="2" aria-required="true" required value="@Model.Period">
+                                    <input type="text" asp-for="Period" id="period" class="tf-input style-1" placeholder="@Localizer["PeriodPlaceholder"]" tabindex="2" aria-required="true" required value="@Model.Period">
                                     <span asp-validation-for="Period" class="text-danger"></span>
                                 </fieldset>
                                 <fieldset class="name">
-                                    <input type="text" asp-for="Name" id="name" class="tf-input style-2" placeholder="Фамилия и имя" tabindex="2" aria-required="true" required value="@Model.Name">
+                                    <input type="text" asp-for="Name" id="name" class="tf-input style-2" placeholder="@Localizer["NamePlaceholder"]" tabindex="2" aria-required="true" required value="@Model.Name">
                                     <span asp-validation-for="Name" class="text-danger"></span>
                                 </fieldset>
                             </div>
 
                             <div class="cols mb-20">
                                 <fieldset class="phone">
-                                    <input type="number" asp-for="Phone" id="phone" class="tf-input style-1" placeholder="Телефон" tabindex="2" aria-required="true" required value="@Model.Phone">
+                                    <input type="number" asp-for="Phone" id="phone" class="tf-input style-1" placeholder="@Localizer["PhonePlaceholder"]" tabindex="2" aria-required="true" required value="@Model.Phone">
                                     <span asp-validation-for="Phone" class="text-danger"></span>
                                 </fieldset>
                                 <fieldset class="address">
-                                    <input type="text" asp-for="Address" id="address" class="tf-input style-2" placeholder="Полный адрес" tabindex="2" aria-required="true" required value="@Model.Address">
+                                    <input type="text" asp-for="Address" id="address" class="tf-input style-2" placeholder="@Localizer["AddressPlaceholder"]" tabindex="2" aria-required="true" required value="@Model.Address">
                                     <span asp-validation-for="Address" class="text-danger"></span>
                                 </fieldset>
                             </div>
 
                             <div class="cols mb-20">
                                 <fieldset class="email">
-                                    <input type="email" asp-for="Email" id="email" class="tf-input style-1" placeholder="E-mail" tabindex="2" aria-required="true" required value="@Model.Email">
+                                    <input type="email" asp-for="Email" id="email" class="tf-input style-1" placeholder="@Localizer["EmailPlaceholder"]" tabindex="2" aria-required="true" required value="@Model.Email">
                                     <span asp-validation-for="Email" class="text-danger"></span>
                                 </fieldset>
                                 <fieldset class="email_confirm">
-                                    <input type="email" asp-for="EmailConfirm" id="email_confirm" class="tf-input style-1" placeholder="Подтвердите e-mail" tabindex="2" aria-required="true" required value="@Model.EmailConfirm">
+                                    <input type="email" asp-for="EmailConfirm" id="email_confirm" class="tf-input style-1" placeholder="@Localizer["EmailConfirmPlaceholder"]" tabindex="2" aria-required="true" required value="@Model.EmailConfirm">
                                     <span asp-validation-for="EmailConfirm" class="text-danger"></span>
                                 </fieldset>
                             </div>
@@ -462,7 +472,7 @@
                             <div class="cols mb-20">
                                 <div class="select-custom">
                                     <select asp-for="Country" id="country" class="tf-select" data-default="">
-                                        <option value="---">Страна проживания</option>
+                                        <option value="---">@Localizer["SelectCountry"]</option>
                                         <option value="Allemagne">Allemagne</option>
                                         <option value="France">France</option>
                                         <option value="Néerlande">Néerlande</option>
@@ -490,28 +500,28 @@
                                        value="true"
                                        required
                                 @(Model.Agree == "true" ? "checked" : "") />
-                                <label for="agree">Я принимаю <a href="#" target="_blank">условия и положения</a>.</label>
+                                <label for="agree">@Localizer["AcceptTerms"] <a href="#" target="_blank">@Localizer["TermsAndConditions"]</a>.</label>
                                 <span asp-validation-for="Agree" class="text-danger"></span>
                             </div>
 
                             <button class="tf-btn style-default btn-color-secondary pd-40 boder-8" type="submit">
-                                <span>Отправить заявку</span>
+                                <span>@Localizer["SubmitApplication"]</span>
                             </button>
                         </form>
 
                         <div class="appointment-info">
                             <div class="info-content">
-                                <h4>Подайте заявку на кредит онлайн</h4>
+                                <h4>@Localizer["ApplyOnlineTitle"]</h4>
                                 <p class="pricing-description">
-                                    Мы всегда готовы помочь вам. Свяжитесь с нами сейчас
+                                    @Localizer["ApplyOnlineDesc"]
                                 </p>
                                 <div class="appointment-info">
                                     <div class="appointment-calculator-info">
-                                        <h4 class="title">Информация о кредите</h4>
+                                        <h4 class="title">@Localizer["LoanInfoTitle"]</h4>
                                         <div class="appointment-details" id="appointment-details">
-                                            <p>Для эффективной годовой процентной ставки (APR)<strong> 2.5 %</strong>,</p>
-                                            <p>Чистая сумма кредита составляет <strong> <span id="appointment-amount-display">10 000</span> <span class="currency-symbol"> €</span> </strong> и общая сумма к возврату составляет<strong> <span id="total-amount">10 779.14</span> <span class="currency-symbol"> €</span></strong>.</p>
-                                            <p>Ежемесячные сборы составляют <strong> <span id="monthly-payment">149.71</span> <span class="currency-symbol"> €</span> </strong> и срок кредита составляет <strong> <span id="appointment-duration">72</span> месяцев</strong>.</p>
+                                            <p>@Localizer["APRInfo"] <strong> 2.5 %</strong>,</p>
+                                            <p>@Localizer["NetLoanInfo"] <strong> <span id="appointment-amount-display">10 000</span> <span class="currency-symbol"> €</span> </strong> @Localizer["And"] @Localizer["TotalRepayment"] <strong> <span id="total-amount">10 779.14</span> <span class="currency-symbol"> €</span></strong>.</p>
+                                            <p>@Localizer["MonthlyFeeInfo"] <strong> <span id="monthly-payment">149.71</span> <span class="currency-symbol"> €</span> </strong> @Localizer["AndTerm"] <strong> <span id="appointment-duration">72</span> @Localizer["Months"]</strong>.</p>
                                         </div>
                                     </div>
                                 </div>
