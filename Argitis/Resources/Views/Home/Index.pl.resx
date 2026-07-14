@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="HomeTitle" xml:space="preserve">
+    <value>Strona główna</value>
+  </data>
+	<data name="HeroTitle1" xml:space="preserve">
+    <value>Korzystne pożyczki na każdą sytuację życiową</value>
+  </data>
+	<data name="HeroDesc1" xml:space="preserve">
+    <value>Znajdź rozwiązanie finansowe odpowiadające Twoim celom.</value>
+  </data>
+	<data name="HeroTitle2" xml:space="preserve">
+    <value>Rozwiązanie dostosowane do Twoich potrzeb</value>
+  </data>
+	<data name="HeroDesc2" xml:space="preserve">
+    <value>Pokryj swoje wydatki, takie jak koszty ślubu, wydatki szkolne.</value>
+  </data>
+	<data name="HeroTitle3" xml:space="preserve">
+    <value>Pożyczka osobista na konkurencyjnych warunkach</value>
+  </data>
+	<data name="HeroDesc3" xml:space="preserve">
+    <value>Pokryj swoje wydatki, takie jak koszty ślubu, wydatki szkolne.</value>
+  </data>
+	<data name="AboutWho" xml:space="preserve">
+    <value>Kim jesteśmy?</value>
+  </data>
+	<data name="AboutHead" xml:space="preserve">
+    <value>Pomagamy Ci osiągnąć Twoje cele finansowe dzięki niezawodnym i szybkim usługom.</value>
+  </data>
+	<data name="AboutDesc" xml:space="preserve">
+    <value>Specjalizujemy się w usługach finansowych dla osób fizycznych i profesjonalistów. Nasze doświadczenie i niezawodność czynią nas zaufanym partnerem. Aktywnie pracujemy nad poprawą naszych usług i doświadczenia klienta. Niezawodność i przejrzystość są naszymi podstawami.</value>
+  </data>
+	<data name="Years" xml:space="preserve">
+    <value>Lata</value>
+  </data>
+	<data name="YearsExp" xml:space="preserve">
+    <value>Lata doświadczenia</value>
+  </data>
+	<data name="HappyClients" xml:space="preserve">
+    <value>Zadowoleni klienci</value>
+  </data>
+	<data name="Reviews" xml:space="preserve">
+    <value>Opinie klientów</value>
+  </data>
+	<data name="Awards" xml:space="preserve">
+    <value>Nagrody</value>
+  </data>
+	<data name="ServiceOffer" xml:space="preserve">
+    <value>Co oferujemy?</value>
+  </data>
+	<data name="ServiceTitle" xml:space="preserve">
+    <value>Nasze usługi</value>
+  </data>
+	<data name="ServiceDesc" xml:space="preserve">
+    <value>Indywidualne rozwiązania dla Twoich potrzeb</value>
+  </data>
+	<data name="SeeMore" xml:space="preserve">
+    <value>Zobacz więcej</value>
+  </data>
+	<data name="ViewDetails" xml:space="preserve">
+    <value>Zobacz szczegóły</value>
+  </data>
+	<data name="LearnMore" xml:space="preserve">
+    <value>Dowiedz się więcej</value>
+  </data>
+	<data name="HowItWorks" xml:space="preserve">
+    <value>Jak to działa?</value>
+  </data>
+	<data name="ProcessDesc" xml:space="preserve">
+    <value>Oferujemy prostą procedurę składania wniosków online.</value>
+  </data>
+	<data name="ProjectsReady" xml:space="preserve">
+    <value>Gotowy do realizacji swoich projektów?</value>
+  </data>
+	<data name="ReviewsTitle" xml:space="preserve">
+    <value>OPINIE KLIENTÓW</value>
+  </data>
+	<data name="ReviewsHead" xml:space="preserve">
+    <value>Co mówią nasi zadowoleni klienci</value>
+  </data>
+	<data name="ContactReady" xml:space="preserve">
+    <value>Gotowy do realizacji swoich projektów?</value>
+  </data>
+	<data name="ContactHead" xml:space="preserve">
+    <value>Skorzystaj z naszych rozwiązań finansowych.</value>
+  </data>
+	<data name="ContactDesc" xml:space="preserve">
+    <value>Pomagamy Ci znaleźć odpowiednie rozwiązanie finansowe. Jesteśmy tutaj, aby Cię wspierać.</value>
+  </data>
+	<data name="RequestCredit" xml:space="preserve">
+    <value>Poproś o kredyt</value>
+  </data>
+	<data name="NamePlaceholder" xml:space="preserve">
+    <value>Imię i nazwisko</value>
+  </data>
+	<data name="PhonePlaceholder" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+	<data name="EmailPlaceholder" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+	<data name="AmountPlaceholder" xml:space="preserve">
+    <value>Pożądana kwota</value>
+  </data>
+	<data name="PeriodPlaceholder" xml:space="preserve">
+    <value>Okres (miesiące)</value>
+  </data>
+	<data name="Confirm" xml:space="preserve">
+    <value>Potwierdź</value>
+  </data>
+	<data name="FaqWhy" xml:space="preserve">
+    <value>Dlaczego warto nas wybrać?</value>
+  </data>
+	<data name="FaqHead" xml:space="preserve">
+    <value>Elastyczne rozwiązania finansowe dla Twoich potrzeb!</value>
+  </data>
+	<data name="FaqDesc" xml:space="preserve">
+    <value>Specjalizujemy się w usługach finansowych w różnych regionach świata, gdzie istnieje zapotrzebowanie.</value>
+  </data>
+</root>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="PersonalLoan" xml:space="preserve"><value>Prestito personale</value></data>
+	<data name="PersonalLoanDesc" xml:space="preserve"><value>I nostri prestiti personali ti aiutano a raggiungere i tuoi obiettivi finanziari a tassi di interesse competitivi.</value></data>
+	<data name="CarLoan" xml:space="preserve"><value>Prestito auto</value></data>
+	<data name="CarLoanDesc" xml:space="preserve"><value>Il prestito auto è una soluzione per l'acquisto di un'auto nuova o usata. Offriamo condizioni flessibili.</value></data>
+	<data name="MortgageLoan" xml:space="preserve"><value>Mutuo ipotecario</value></data>
+	<data name="MortgageLoanDesc" xml:space="preserve"><value>Acquista la casa dei tuoi sogni con la nostra soluzione ipotecaria personalizzata e sicura.</value></data>
+	<data name="InvestmentLoan" xml:space="preserve"><value>Prestito investimenti</value></data>
+	<data name="InvestmentLoanDesc" xml:space="preserve"><value>Il prestito investimenti è adatto ai clienti che desiderano sviluppare i propri investimenti o avviare nuovi progetti.</value></data>
+	<data name="DebtConsolidation" xml:space="preserve"><value>Consolidamento debiti</value></data>
+	<data name="DebtConsolidationDesc" xml:space="preserve"><value>Combina i tuoi prestiti e approfitta di condizioni migliori per ottimizzare il tuo budget.</value></data>
+	<data name="Refinancing" xml:space="preserve"><value>Rifinanziamento</value></data>
+	<data name="RefinancingDesc" xml:space="preserve"><value>I nostri prestiti personali ti aiutano a raggiungere i tuoi obiettivi finanziari a tassi di interesse competitivi.</value></data>
+
+	<data name="Testimonial1Quote" xml:space="preserve"><value>Grazie a GROUPE-ARGITIS, sono riuscito a finanziare la mia nuova auto senza stress. Il team è stato molto professionale e attento.</value></data>
+	<data name="Testimonial1Author" xml:space="preserve"><value>Signora Dupont</value></data>
+	<data name="Testimonial1Role" xml:space="preserve"><value>Insegnante</value></data>
+	<data name="Testimonial2Quote" xml:space="preserve"><value>Ho consolidato i miei prestiti e ora ho una rata mensile che si adatta al mio budget. Grazie a tutto il team per il loro supporto!</value></data>
+	<data name="Testimonial2Author" xml:space="preserve"><value>Signor Martin</value></data>
+	<data name="Testimonial2Role" xml:space="preserve"><value>Contabile</value></data>
+	<data name="Testimonial3Quote" xml:space="preserve"><value>Il servizio clienti è stato eccellente. Il personale è stato amichevole e ha risposto a tutte le mie domande.</value></data>
+	<data name="Testimonial3Author" xml:space="preserve"><value>Signor Bernard</value></data>
+	<data name="Testimonial3Role" xml:space="preserve"><value>Autista</value></data>
+	<data name="Testimonial4Quote" xml:space="preserve"><value>Mi è piaciuta la trasparenza e la velocità del servizio. GROUPE-ARGITIS mi ha supportato in ogni fase della mia richiesta di prestito.</value></data>
+	<data name="Testimonial4Author" xml:space="preserve"><value>Michael L.</value></data>
+	<data name="Testimonial4Role" xml:space="preserve"><value>Rappresentante di vendita</value></data>
+	<data name="Testimonial5Quote" xml:space="preserve"><value>Approvazione molto rapida e servizio comodo. Lo consiglio a tutti!</value></data>
+	<data name="Testimonial5Author" xml:space="preserve"><value>Anna K.</value></data>
+	<data name="Testimonial5Role" xml:space="preserve"><value>Designer</value></data>
+	<data name="Testimonial6Quote" xml:space="preserve"><value>Grazie al team per l'aiuto con il mutuo. Il processo è stato trasparente e veloce.</value></data>
+	<data name="Testimonial6Author" xml:space="preserve"><value>Dmitry S.</value></data>
+	<data name="Testimonial6Role" xml:space="preserve"><value>Ingegnere</value></data>
+
+	<data name="Step1Title" xml:space="preserve"><value>Invia la tua richiesta</value></data>
+	<data name="Step1Desc" xml:space="preserve"><value>Compila il modulo di richiesta online. Semplice, veloce e sicuro.</value></data>
+	<data name="Step2Title" xml:space="preserve"><value>Esaminiamo la tua richiesta</value></data>
+	<data name="Step2Desc" xml:space="preserve"><value>Esaminiamo il tuo caso gratuitamente e ti informiamo del risultato.</value></data>
+	<data name="Step3Title" xml:space="preserve"><value>Elaborazione della richiesta</value></data>
+	<data name="Step3Desc" xml:space="preserve"><value>Ti contatteremo per ulteriori informazioni e valuteremo la tua richiesta.</value></data>
+	<data name="Step4Title" xml:space="preserve"><value>Ricevi il tuo denaro</value></data>
+	<data name="Step4Desc" xml:space="preserve"><value>Dopo l'approvazione, il denaro verrà trasferito direttamente sul tuo conto.</value></data>
+
+	<data name="Faq1Q" xml:space="preserve"><value>Prestito personale</value></data>
+	<data name="Faq1A" xml:space="preserve"><value>I nostri prestiti personali ti aiutano a raggiungere i tuoi obiettivi finanziari a tassi di interesse competitivi.</value></data>
+	<data name="Faq2Q" xml:space="preserve"><value>Prestito auto</value></data>
+	<data name="Faq2A" xml:space="preserve"><value>Il prestito auto è una soluzione per l'acquisto di un'auto nuova o usata. Offriamo condizioni flessibili.</value></data>
+	<data name="Faq3Q" xml:space="preserve"><value>Mutuo ipotecario</value></data>
+	<data name="Faq3A" xml:space="preserve"><value>I nostri mutui ipotecari ti aiutano a realizzare il tuo sogno di avere una casa di proprietà. Perché affittare quando puoi comprare?</value></data>
+	<data name="Faq4Q" xml:space="preserve"><value>Finanziamento per l'istruzione</value></data>
+	<data name="Faq4A" xml:space="preserve"><value></value></data>
+	<data name="ContactSuccessMessage" xml:space="preserve">
+    <value>Il tuo messaggio è stato inviato con successo! Ti contatteremo a breve.</value>
+</data>
+</root>

@@ -33,10 +33,14 @@
 
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <title>@ViewData["Title"] - GROUPE-ARGITIS</title>
+    <!-- СЮДА ВСТАВЬТЕ @Localizer, ЧТОБЫ ЗАГРУЗИТЬ ЗАГОЛОВОК -->
+    @using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+    <title>@ViewData["Title"] - VeltisGroup</title>
     <meta name="description" content="@ViewData["MetaDescription"]">
     <meta name="keywords" content="@ViewData["MetaKeywords"]">
-    <meta name="author" content="GROUPE-ARGITIS">
+    <meta name="author" content="VeltisGroup">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="~/css/bootstrap.css">
@@ -51,7 +55,7 @@
     <link rel="shortcut icon" href="~/images/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="~/images/favicon.png">
 
-    <style>
+<style>
         .tf-languages .btn-select {
         display: flex;
         align-items: center;

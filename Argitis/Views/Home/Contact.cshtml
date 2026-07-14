@@ -1,8 +1,11 @@
 ﻿@model Argitis.Models.ContactViewModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
-    ViewData["Title"] = Model.Title;
+    ViewData["Title"] = $"{Localizer["HomeTitle"]} - VeltisGroup";
     ViewData["MetaDescription"] = Model.MetaDescription;
+    ViewData["MetaKeywords"] = Model.MetaKeywords;
 }
 
 
@@ -36,10 +39,10 @@
                         <form class="form-consultation" method="post" asp-action="Contact" id="contactform">
                             @Html.AntiForgeryToken()
 
-                            @if (TempData["SuccessMessage"] != null)
+                            @if (TempData["SuccessMessageKey"] != null)
                             {
                                 <div class="message-alert alert alert-success alert-dismissible fade show" role="alert">
-                                    <i class="fa fa-check-circle"></i> @TempData["SuccessMessage"]
+                                    <i class="fa fa-check-circle"></i> @Localizer[TempData["SuccessMessageKey"].ToString()]
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                             }

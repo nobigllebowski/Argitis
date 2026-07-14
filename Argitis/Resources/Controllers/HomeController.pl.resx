@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="PersonalLoan" xml:space="preserve"><value>Pożyczka osobista</value></data>
+	<data name="PersonalLoanDesc" xml:space="preserve"><value>Nasze pożyczki osobiste pomagają Ci osiągnąć cele finansowe przy konkurencyjnych stopach procentowych.</value></data>
+	<data name="CarLoan" xml:space="preserve"><value>Kredyt samochodowy</value></data>
+	<data name="CarLoanDesc" xml:space="preserve"><value>Kredyt samochodowy to rozwiązanie na zakup nowego lub używanego samochodu. Oferujemy elastyczne warunki.</value></data>
+	<data name="MortgageLoan" xml:space="preserve"><value>Kredyt hipoteczny</value></data>
+	<data name="MortgageLoanDesc" xml:space="preserve"><value>Kup wymarzony dom dzięki naszemu spersonalizowanemu i bezpiecznemu rozwiązaniu hipotecznemu.</value></data>
+	<data name="InvestmentLoan" xml:space="preserve"><value>Kredyt inwestycyjny</value></data>
+	<data name="InvestmentLoanDesc" xml:space="preserve"><value>Kredyt inwestycyjny jest odpowiedni dla klientów, którzy chcą rozwijać swoje inwestycje lub rozpocząć nowe projekty.</value></data>
+	<data name="DebtConsolidation" xml:space="preserve"><value>Konsolidacja długów</value></data>
+	<data name="DebtConsolidationDesc" xml:space="preserve"><value>Połącz swoje pożyczki i skorzystaj z lepszych warunków, aby zoptymalizować swój budżet.</value></data>
+	<data name="Refinancing" xml:space="preserve"><value>Refinansowanie</value></data>
+	<data name="RefinancingDesc" xml:space="preserve"><value>Nasze pożyczki osobiste pomagają Ci osiągnąć cele finansowe przy konkurencyjnych stopach procentowych.</value></data>
+
+	<data name="Testimonial1Quote" xml:space="preserve"><value>Dzięki GROUPE-ARGITIS mogłem sfinansować mój nowy samochód bez stresu. Zespół był bardzo profesjonalny i uważny.</value></data>
+	<data name="Testimonial1Author" xml:space="preserve"><value>Pani Dupont</value></data>
+	<data name="Testimonial1Role" xml:space="preserve"><value>Nauczyciel</value></data>
+	<data name="Testimonial2Quote" xml:space="preserve"><value>Skonsolidowałem moje pożyczki i teraz mam miesięczną ratę, która pasuje do mojego budżetu. Dziękuję całemu zespołowi za wsparcie!</value></data>
+	<data name="Testimonial2Author" xml:space="preserve"><value>Pan Martin</value></data>
+	<data name="Testimonial2Role" xml:space="preserve"><value>Księgowy</value></data>
+	<data name="Testimonial3Quote" xml:space="preserve"><value>Obsługa klienta była znakomita. Personel był przyjazny i odpowiedział na wszystkie moje pytania.</value></data>
+	<data name="Testimonial3Author" xml:space="preserve"><value>Pan Bernard</value></data>
+	<data name="Testimonial3Role" xml:space="preserve"><value>Kierowca</value></data>
+	<data name="Testimonial4Quote" xml:space="preserve"><value>Podobała mi się przejrzystość i szybkość obsługi. GROUPE-ARGITIS wspierał mnie na każdym etapie mojego wniosku o pożyczkę.</value></data>
+	<data name="Testimonial4Author" xml:space="preserve"><value>Michael L.</value></data>
+	<data name="Testimonial4Role" xml:space="preserve"><value>Przedstawiciel handlowy</value></data>
+	<data name="Testimonial5Quote" xml:space="preserve"><value>Bardzo szybka akceptacja i wygodna usługa. Polecam wszystkim!</value></data>
+	<data name="Testimonial5Author" xml:space="preserve"><value>Anna K.</value></data>
+	<data name="Testimonial5Role" xml:space="preserve"><value>Projektant</value></data>
+	<data name="Testimonial6Quote" xml:space="preserve"><value>Dzięki zespołowi za pomoc z kredytem hipotecznym. Proces był przejrzysty i szybki.</value></data>
+	<data name="Testimonial6Author" xml:space="preserve"><value>Dmitry S.</value></data>
+	<data name="Testimonial6Role" xml:space="preserve"><value>Inżynier</value></data>
+
+	<data name="Step1Title" xml:space="preserve"><value>Złóż wniosek</value></data>
+	<data name="Step1Desc" xml:space="preserve"><value>Wypełnij formularz zgłoszeniowy online. Proste, szybkie i bezpieczne.</value></data>
+	<data name="Step2Title" xml:space="preserve"><value>Sprawdzamy Twój wniosek</value></data>
+	<data name="Step2Desc" xml:space="preserve"><value>Sprawdzamy Twoją sprawę bezpłatnie i informujemy Cię o wyniku.</value></data>
+	<data name="Step3Title" xml:space="preserve"><value>Przetwarzanie wniosku</value></data>
+	<data name="Step3Desc" xml:space="preserve"><value>Skontaktujemy się z Tobą w celu uzyskania dodatkowych informacji i ocenimy Twój wniosek.</value></data>
+	<data name="Step4Title" xml:space="preserve"><value>Odbierz swoje pieniądze</value></data>
+	<data name="Step4Desc" xml:space="preserve"><value>Po zatwierdzeniu pieniądze zostaną przelane bezpośrednio na Twoje konto.</value></data>
+
+	<data name="Faq1Q" xml:space="preserve"><value>Pożyczka osobista</value></data>
+	<data name="Faq1A" xml:space="preserve"><value>Nasze pożyczki osobiste pomagają Ci osiągnąć cele finansowe przy konkurencyjnych stopach procentowych.</value></data>
+	<data name="Faq2Q" xml:space="preserve"><value>Kredyt samochodowy</value></data>
+	<data name="Faq2A" xml:space="preserve"><value>Kredyt samochodowy to rozwiązanie na zakup nowego lub używanego samochodu. Oferujemy elastyczne warunki.</value></data>
+	<data name="Faq3Q" xml:space="preserve"><value>Kredyt hipoteczny</value></data>
+	<data name="Faq3A" xml:space="preserve"><value>Nasze kredyty hipoteczne pomagają Ci zrealizować marzenie o własnym domu. Dlaczego wynajmować, skoro możesz kupić?</value></data>
+	<data name="Faq4Q" xml:space="preserve"><value>Finansowanie edukacji</value></data>
+	<data name="Faq4A" xml:space="preserve"><value></value></data>
+	<data name="ContactSuccessMessage" xml:space="preserve">
+    <value>Twoja wiadomość została wysłana pomyślnie! Skontaktujemy się z Tobą wkrótce.</value>
+</data>
+</root>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="PersonalLoan" xml:space="preserve"><value>Self personali</value></data>
+	<data name="PersonalLoanDesc" xml:space="preserve"><value>Is-self personali tagħna jgħinek tilħaq l-għanijiet finanzjarji tiegħek b'rati ta' interess kompetittivi.</value></data>
+	<data name="CarLoan" xml:space="preserve"><value>Self tal-karozza</value></data>
+	<data name="CarLoanDesc" xml:space="preserve"><value>Is-self tal-karozza huwa soluzzjoni għax-xiri ta' karozza ġdida jew użata. Noffru termini flessibbli.</value></data>
+	<data name="MortgageLoan" xml:space="preserve"><value>Self ipotekarju</value></data>
+	<data name="MortgageLoanDesc" xml:space="preserve"><value>Ixtri d-dar tal-ħolm tiegħek bis-soluzzjoni ipotekarja personalizzata u sigura tagħna.</value></data>
+	<data name="InvestmentLoan" xml:space="preserve"><value>Self tal-investiment</value></data>
+	<data name="InvestmentLoanDesc" xml:space="preserve"><value>Is-self tal-investiment huwa adattat għal klijenti li jixtiequ jiżviluppaw l-investimenti tagħhom jew jibdew proġetti ġodda.</value></data>
+	<data name="DebtConsolidation" xml:space="preserve"><value>Konsolidazzjoni tad-dejn</value></data>
+	<data name="DebtConsolidationDesc" xml:space="preserve"><value>Għaqqad is-self tiegħek u ħu vantaġġ minn termini aħjar biex tottimizza l-baġit tiegħek.</value></data>
+	<data name="Refinancing" xml:space="preserve"><value>Rifinanzjament</value></data>
+	<data name="RefinancingDesc" xml:space="preserve"><value>Is-self personali tagħna jgħinek tilħaq l-għanijiet finanzjarji tiegħek b'rati ta' interess kompetittivi.</value></data>
+
+	<data name="Testimonial1Quote" xml:space="preserve"><value>Grazzi għal GROUPE-ARGITIS, stajt niffinanzja l-karozza ġdida tiegħi mingħajr stress. It-tim kien professjonali ħafna u attent.</value></data>
+	<data name="Testimonial1Author" xml:space="preserve"><value>Is-Sinjura Dupont</value></data>
+	<data name="Testimonial1Role" xml:space="preserve"><value>Għalliem</value></data>
+	<data name="Testimonial2Quote" xml:space="preserve"><value>Kkonsolidajt is-self tiegħi u issa għandi ħlas mensili li jaqbel mal-baġit tiegħi. Grazzi lit-tim kollu għall-appoġġ tagħhom!</value></data>
+	<data name="Testimonial2Author" xml:space="preserve"><value>Is-Sur Martin</value></data>
+	<data name="Testimonial2Role" xml:space="preserve"><value>Kontabilist</value></data>
+	<data name="Testimonial3Quote" xml:space="preserve"><value>Is-servizz tal-konsumatur kien eċċellenti. L-istaff kien ta' ħbiberija u wieġeb il-mistoqsijiet kollha tiegħi.</value></data>
+	<data name="Testimonial3Author" xml:space="preserve"><value>Is-Sur Bernard</value></data>
+	<data name="Testimonial3Role" xml:space="preserve"><value>Sewwieq</value></data>
+	<data name="Testimonial4Quote" xml:space="preserve"><value>Għoġobni t-trasparenza u l-veloċità tas-servizz. GROUPE-ARGITIS appoġġjani f'kull stadju tal-applikazzjoni tiegħi għas-self.</value></data>
+	<data name="Testimonial4Author" xml:space="preserve"><value>Michael L.</value></data>
+	<data name="Testimonial4Role" xml:space="preserve"><value>Rappreżentant tal-bejgħ</value></data>
+	<data name="Testimonial5Quote" xml:space="preserve"><value>Approvazzjoni malajr ħafna u servizz konvenjenti. Nirrakkomanda lil kulħadd!</value></data>
+	<data name="Testimonial5Author" xml:space="preserve"><value>Anna K.</value></data>
+	<data name="Testimonial5Role" xml:space="preserve"><value>Disinjatur</value></data>
+	<data name="Testimonial6Quote" xml:space="preserve"><value>Grazzi lit-tim għall-għajnuna bl-ipoteka. Il-proċess kien trasparenti u veloċi.</value></data>
+	<data name="Testimonial6Author" xml:space="preserve"><value>Dmitry S.</value></data>
+	<data name="Testimonial6Role" xml:space="preserve"><value>Inġinier</value></data>
+
+	<data name="Step1Title" xml:space="preserve"><value>Ibgħat l-applikazzjoni tiegħek</value></data>
+	<data name="Step1Desc" xml:space="preserve"><value>Imla l-formola tal-applikazzjoni onlajn. Sempliċi, malajr u sigur.</value></data>
+	<data name="Step2Title" xml:space="preserve"><value>Nirrevedu l-applikazzjoni tiegħek</value></data>
+	<data name="Step2Desc" xml:space="preserve"><value>Nirrevedu l-każ tiegħek b'xejn u ninfurmawk bir-riżultat.</value></data>
+	<data name="Step3Title" xml:space="preserve"><value>Ipproċessar tal-applikazzjoni</value></data>
+	<data name="Step3Desc" xml:space="preserve"><value>Nikkuntattjawlek għal aktar informazzjoni u nevalwaw l-applikazzjoni tiegħek.</value></data>
+	<data name="Step4Title" xml:space="preserve"><value>Irċievi l-flus tiegħek</value></data>
+	<data name="Step4Desc" xml:space="preserve"><value>Wara l-approvazzjoni, il-flus jiġu trasferiti direttament fil-kont tiegħek.</value></data>
+
+	<data name="Faq1Q" xml:space="preserve"><value>Self personali</value></data>
+	<data name="Faq1A" xml:space="preserve"><value>Is-self personali tagħna jgħinek tilħaq l-għanijiet finanzjarji tiegħek b'rati ta' interess kompetittivi.</value></data>
+	<data name="Faq2Q" xml:space="preserve"><value>Self tal-karozza</value></data>
+	<data name="Faq2A" xml:space="preserve"><value>Is-self tal-karozza huwa soluzzjoni għax-xiri ta' karozza ġdida jew użata. Noffru termini flessibbli.</value></data>
+	<data name="Faq3Q" xml:space="preserve"><value>Self ipotekarju</value></data>
+	<data name="Faq3A" xml:space="preserve"><value>Is-self ipotekarju tagħna jgħinek tirrealizza l-ħolma tiegħek li jkollok dar. Għaliex tikri meta tista' tixtri?</value></data>
+	<data name="Faq4Q" xml:space="preserve"><value>Finanzjament tal-edukazzjoni</value></data>
+	<data name="Faq4A" xml:space="preserve"><value></value></data>
+	<data name="ContactSuccessMessage" xml:space="preserve">
+    <value>Il-messaġġ tiegħek intbagħat b'suċċess! Aħna nikkuntattjawek dalwaqt.</value>
+</data>
+</root>

@@ -2,177 +2,100 @@ using Argitis.DTOs;
 using Argitis.Models;
 using Argitis.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization; // ДОБАВЛЕНО для локализации в контроллере
+using System.Globalization;
 
 namespace Argitis.Controllers
 {
     public class HomeController : Controller
     {
         private readonly IEmailService _emailService;
+        private readonly IStringLocalizer<HomeController> _localizer; // Локализатор для контроллера
 
-        // Внедряем IEmailService через конструктор
-        public HomeController(IEmailService emailService)
+        public HomeController(IEmailService emailService, IStringLocalizer<HomeController> localizer)
         {
             _emailService = emailService;
+            _localizer = localizer;
         }
 
         public IActionResult Index()
         {
             var model = new HomeViewModel();
 
-            // Услуги
+            // === УСЛУГИ (переводятся через .resx) ===
             model.Services = new List<HomeViewModel.ServiceItem>
             {
-                new HomeViewModel.ServiceItem
-                {
-                    Name = "Персональный кредит",
-                    Description = "Наши персональные кредиты помогают вам достичь ваших финансовых целей по конкурентоспособным процентным ставкам.",
-                    ImageUrl = "~/images/personnel.webp",
-                    Link = "/Home/Appointment"
-                },
-                new HomeViewModel.ServiceItem
-                {
-                    Name = "Автокредит",
-                    Description = "Автокредит - это решение для покупки нового или подержанного автомобиля. Мы предлагаем гибкие условия.",
-                    ImageUrl = "~/images/automobile.webp",
-                    Link = "/Home/Appointment"
-                },
-                new HomeViewModel.ServiceItem
-                {
-                    Name = "Ипотечный кредит",
-                    Description = "Купите дом своей мечты благодаря нашему индивидуальному и безопасному решению ипотечного кредита.",
-                    ImageUrl = "~/images/immo.jpg",
-                    Link = "/Home/Appointment"
-                },
-                new HomeViewModel.ServiceItem
-                {
-                    Name = "Инвестиционный кредит",
-                    Description = "Инвестиционный кредит подходит для клиентов, которые хотят развивать свои инвестиции или запускать новые проекты.",
-                    ImageUrl = "~/images/inv.jpg",
-                    Link = "/Home/Appointment"
-                },
-                new HomeViewModel.ServiceItem
-                {
-                    Name = "Выкуп/реструктуризация долгов",
-                    Description = "Объедините ваши кредиты и воспользуйтесь более выгодными условиями для оптимизации вашего бюджета.",
-                    ImageUrl = "~/images/debt.webp",
-                    Link = "/Home/Appointment"
-                },
-                new HomeViewModel.ServiceItem
-                {
-                    Name = "Рефинансирование кредитов",
-                    Description = "Наши персональные кредиты помогают вам достичь ваших финансовых целей по конкурентоспособным процентным ставкам.",
-                    ImageUrl = "~/images/regroup.webp",
-                    Link = "/Home/Appointment"
-                }
+                new HomeViewModel.ServiceItem { Name = _localizer["PersonalLoan"], Description = _localizer["PersonalLoanDesc"], ImageUrl = "~/images/personnel.webp", Link = "/Home/Appointment" },
+                new HomeViewModel.ServiceItem { Name = _localizer["CarLoan"], Description = _localizer["CarLoanDesc"], ImageUrl = "~/images/automobile.webp", Link = "/Home/Appointment" },
+                new HomeViewModel.ServiceItem { Name = _localizer["MortgageLoan"], Description = _localizer["MortgageLoanDesc"], ImageUrl = "~/images/immo.jpg", Link = "/Home/Appointment" },
+                new HomeViewModel.ServiceItem { Name = _localizer["InvestmentLoan"], Description = _localizer["InvestmentLoanDesc"], ImageUrl = "~/images/inv.jpg", Link = "/Home/Appointment" },
+                new HomeViewModel.ServiceItem { Name = _localizer["DebtConsolidation"], Description = _localizer["DebtConsolidationDesc"], ImageUrl = "~/images/debt.webp", Link = "/Home/Appointment" },
+                new HomeViewModel.ServiceItem { Name = _localizer["Refinancing"], Description = _localizer["RefinancingDesc"], ImageUrl = "~/images/regroup.webp", Link = "/Home/Appointment" }
             };
 
-            // Отзывы
+            // === ОТЗЫВЫ (с правильным полом) ===
             model.Testimonials = new List<HomeViewModel.TestimonialItem>
             {
                 new HomeViewModel.TestimonialItem
                 {
-                    Quote = "Благодаря GROUPE-ARGITIS я смог финансировать свой новый автомобиль без стресса. Команда была очень профессиональной и внимательной.",
-                    Author = "Г-жа Дюпон",
-                    Role = "Учитель",
-                    ImageUrl = "https://i.pravatar.cc/150?img=1" // Женщина 1
+                    Quote = _localizer["Testimonial1Quote"],
+                    Author = _localizer["Testimonial1Author"],
+                    Role = _localizer["Testimonial1Role"],
+                    ImageUrl = "https://randomuser.me/api/portraits/women/1.jpg" // Женщина (Г-жа Дюпон)
                 },
                 new HomeViewModel.TestimonialItem
                 {
-                    Quote = "Я объединил свои кредиты, и теперь у меня есть ежемесячный платеж, соответствующий моему бюджету. Спасибо всей команде за их поддержку!",
-                    Author = "Г-н Мартен",
-                    Role = "Бухгалтер",
-                    ImageUrl = "https://i.pravatar.cc/150?img=11" // Мужчина 1
+                    Quote = _localizer["Testimonial2Quote"],
+                    Author = _localizer["Testimonial2Author"],
+                    Role = _localizer["Testimonial2Role"],
+                    ImageUrl = "https://randomuser.me/api/portraits/men/2.jpg" // Мужчина (Г-н Мартен)
                 },
                 new HomeViewModel.TestimonialItem
                 {
-                    Quote = "Обслуживание клиентов было отличным. Персонал был дружелюбным и ответил на все мои вопросы.",
-                    Author = "Г-н Бернар",
-                    Role = "Водитель",
-                    ImageUrl = "https://i.pravatar.cc/150?img=12" // Мужчина 2
+                    Quote = _localizer["Testimonial3Quote"],
+                    Author = _localizer["Testimonial3Author"],
+                    Role = _localizer["Testimonial3Role"],
+                    ImageUrl = "https://randomuser.me/api/portraits/men/3.jpg" // Мужчина (Г-н Бернар)
                 },
                 new HomeViewModel.TestimonialItem
                 {
-                    Quote = "Мне понравилась прозрачность и скорость обслуживания. GROUPE-ARGITIS поддерживала меня на каждом этапе моей заявки на кредит.",
-                    Author = "Michael L.",
-                    Role = "Торговый представитель",
-                    ImageUrl = "https://i.pravatar.cc/150?img=13" // Мужчина 3
+                    Quote = _localizer["Testimonial4Quote"],
+                    Author = _localizer["Testimonial4Author"],
+                    Role = _localizer["Testimonial4Role"],
+                    ImageUrl = "https://randomuser.me/api/portraits/men/4.jpg" // Мужчина (Michael L.)
                 },
                 new HomeViewModel.TestimonialItem
                 {
-                    Quote = "Очень быстрое одобрение и удобный сервис. Рекомендую всем!",
-                    Author = "Анна К.",
-                    Role = "Дизайнер",
-                    ImageUrl = "https://i.pravatar.cc/150?img=5" // Женщина 2
+                    Quote = _localizer["Testimonial5Quote"],
+                    Author = _localizer["Testimonial5Author"],
+                    Role = _localizer["Testimonial5Role"],
+                    ImageUrl = "https://randomuser.me/api/portraits/women/5.jpg" // Женщина (Анна К.)
                 },
                 new HomeViewModel.TestimonialItem
                 {
-                    Quote = "Спасибо команде за помощь с ипотекой. Процесс был прозрачным и быстрым.",
-                    Author = "Дмитрий С.",
-                    Role = "Инженер",
-                    ImageUrl = "https://i.pravatar.cc/150?img=4" // Мужчина 4
+                    Quote = _localizer["Testimonial6Quote"],
+                    Author = _localizer["Testimonial6Author"],
+                    Role = _localizer["Testimonial6Role"],
+                    ImageUrl = "https://randomuser.me/api/portraits/men/6.jpg" // Мужчина (Дмитрий С.)
                 }
             };
 
-            // Процесс (4 шага)
+            // === ПРОЦЕСС (переводятся через .resx) ===
             model.ProcessSteps = new List<HomeViewModel.ProcessStep>
             {
-                new HomeViewModel.ProcessStep
-                {
-                    Title = "Подайте заявку",
-                    Description = "Заполните форму заявки онлайн. Просто, быстро и безопасно.",
-                    IconClass = "icon-AddressBook",
-                    StepNumber = 1
-                },
-                new HomeViewModel.ProcessStep
-                {
-                    Title = "Мы изучаем вашу заявку",
-                    Description = "Мы изучаем ваше дело бесплатно и информируем вас о результате.",
-                    IconClass = "icon-ListChecks",
-                    StepNumber = 2
-                },
-                new HomeViewModel.ProcessStep
-                {
-                    Title = "Обработка заявки",
-                    Description = "Мы свяжемся с вами для получения дополнительной информации и оценки вашей заявки.",
-                    IconClass = "icon-FlowerLotus",
-                    StepNumber = 3
-                },
-                new HomeViewModel.ProcessStep
-                {
-                    Title = "Получите деньги",
-                    Description = "После одобрения деньги будут переведены непосредственно на ваш счет.",
-                    IconClass = "icon-Lifebuoy",
-                    StepNumber = 4
-                }
+                new HomeViewModel.ProcessStep { Title = _localizer["Step1Title"], Description = _localizer["Step1Desc"], IconClass = "icon-AddressBook", StepNumber = 1 },
+                new HomeViewModel.ProcessStep { Title = _localizer["Step2Title"], Description = _localizer["Step2Desc"], IconClass = "icon-ListChecks", StepNumber = 2 },
+                new HomeViewModel.ProcessStep { Title = _localizer["Step3Title"], Description = _localizer["Step3Desc"], IconClass = "icon-FlowerLotus", StepNumber = 3 },
+                new HomeViewModel.ProcessStep { Title = _localizer["Step4Title"], Description = _localizer["Step4Desc"], IconClass = "icon-Lifebuoy", StepNumber = 4 }
             };
 
-            // FAQ
+            // === FAQ (переводятся через .resx) ===
             model.FaqItems = new List<HomeViewModel.FaqItem>
             {
-                new HomeViewModel.FaqItem
-                {
-                    Question = "Персональный кредит",
-                    Answer = "Наши персональные кредиты помогают вам достичь ваших финансовых целей по конкурентоспособным процентным ставкам.",
-                    IsExpanded = false
-                },
-                new HomeViewModel.FaqItem
-                {
-                    Question = "Автокредит",
-                    Answer = "Автокредит - это решение для покупки нового или подержанного автомобиля. Мы предлагаем гибкие условия.",
-                    IsExpanded = true
-                },
-                new HomeViewModel.FaqItem
-                {
-                    Question = "Ипотечный кредит",
-                    Answer = "Наши ипотечные кредиты помогают вам осуществить вашу мечту о собственности. Зачем арендовать, когда можно купить?",
-                    IsExpanded = false
-                },
-                new HomeViewModel.FaqItem
-                {
-                    Question = "Финансирование обучения",
-                    Answer = "",
-                    IsExpanded = false
-                }
+                new HomeViewModel.FaqItem { Question = _localizer["Faq1Q"], Answer = _localizer["Faq1A"], IsExpanded = false },
+                new HomeViewModel.FaqItem { Question = _localizer["Faq2Q"], Answer = _localizer["Faq2A"], IsExpanded = true },
+                new HomeViewModel.FaqItem { Question = _localizer["Faq3Q"], Answer = _localizer["Faq3A"], IsExpanded = false },
+                new HomeViewModel.FaqItem { Question = _localizer["Faq4Q"], Answer = _localizer["Faq4A"], IsExpanded = false }
             };
 
             return View(model);
@@ -184,52 +107,40 @@ namespace Argitis.Controllers
         {
             var model = new ServicesViewModel();
 
-            // Заполняем услуги
             model.Services = new List<ServicesViewModel.ServiceItem>
-    {
-        new ServicesViewModel.ServiceItem
-        {
-            Name = "Персональный кредит",
-            Description = "Наши персональные кредиты помогают вам достичь ваших финансовых целей по конкурентоспособным процентным ставкам.",
-            ImageUrl = "~/images/personnel.webp",
-            Link = "/Home/Appointment"
-        },
-        new ServicesViewModel.ServiceItem
-        {
-            Name = "Автокредит",
-            Description = "Автокредит - это решение для покупки нового или подержанного автомобиля. Мы предлагаем гибкие условия.",
-            ImageUrl = "~/images/automobile.webp",
-            Link = "/Home/Appointment"
-        },
-        new ServicesViewModel.ServiceItem
-        {
-            Name = "Ипотечный кредит",
-            Description = "Купите дом своей мечты благодаря нашему индивидуальному и безопасному решению ипотечного кредита.",
-            ImageUrl = "~/images/immo.jpg",
-            Link = "/Home/Appointment"
-        },
-        new ServicesViewModel.ServiceItem
-        {
-            Name = "Инвестиционный кредит",
-            Description = "Инвестиционный кредит подходит для клиентов, которые хотят развивать свои инвестиции или запускать новые проекты.",
-            ImageUrl = "~/images/inv.jpg",
-            Link = "/Home/Appointment"
-        },
-        new ServicesViewModel.ServiceItem
-        {
-            Name = "Выкуп/реструктуризация долгов",
-            Description = "Объедините ваши кредиты и воспользуйтесь более выгодными условиями для оптимизации вашего бюджета.",
-            ImageUrl = "~/images/debt.webp",
-            Link = "/Home/Appointment"
-        },
-        new ServicesViewModel.ServiceItem
-        {
-            Name = "Рефинансирование кредитов",
-            Description = "Наши персональные кредиты помогают вам достичь ваших финансовых целей по конкурентоспособным процентным ставкам.",
-            ImageUrl = "~/images/regroup.webp",
-            Link = "/Home/Appointment"
+            {
+                new ServicesViewModel.ServiceItem { Name = _localizer["PersonalLoan"], Description = _localizer["PersonalLoanDesc"], ImageUrl = "~/images/personnel.webp", Link = "/Home/Appointment" },
+                new ServicesViewModel.ServiceItem { Name = _localizer["CarLoan"], Description = _localizer["CarLoanDesc"], ImageUrl = "~/images/automobile.webp", Link = "/Home/Appointment" },
+                new ServicesViewModel.ServiceItem { Name = _localizer["MortgageLoan"], Description = _localizer["MortgageLoanDesc"], ImageUrl = "~/images/immo.jpg", Link = "/Home/Appointment" },
+                new ServicesViewModel.ServiceItem { Name = _localizer["InvestmentLoan"], Description = _localizer["InvestmentLoanDesc"], ImageUrl = "~/images/inv.jpg", Link = "/Home/Appointment" },
+                new ServicesViewModel.ServiceItem { Name = _localizer["DebtConsolidation"], Description = _localizer["DebtConsolidationDesc"], ImageUrl = "~/images/debt.webp", Link = "/Home/Appointment" },
+                new ServicesViewModel.ServiceItem { Name = _localizer["Refinancing"], Description = _localizer["RefinancingDesc"], ImageUrl = "~/images/regroup.webp", Link = "/Home/Appointment" }
+            };
+
+            return View(model);
         }
-    };
+
+        // GET: /Home/About
+        [HttpGet]
+        public IActionResult About()
+        {
+            var model = new AboutViewModel();
+
+            model.Testimonials = new List<AboutViewModel.TestimonialItem>
+            {
+                new AboutViewModel.TestimonialItem { Quote = _localizer["Testimonial1Quote"], Author = _localizer["Testimonial1Author"], Role = _localizer["Testimonial1Role"] },
+                new AboutViewModel.TestimonialItem { Quote = _localizer["Testimonial2Quote"], Author = _localizer["Testimonial2Author"], Role = _localizer["Testimonial2Role"] },
+                new AboutViewModel.TestimonialItem { Quote = _localizer["Testimonial3Quote"], Author = _localizer["Testimonial3Author"], Role = _localizer["Testimonial3Role"] },
+                new AboutViewModel.TestimonialItem { Quote = _localizer["Testimonial4Quote"], Author = _localizer["Testimonial4Author"], Role = _localizer["Testimonial4Role"] }
+            };
+
+            model.FaqItems = new List<AboutViewModel.FaqItem>
+            {
+                new AboutViewModel.FaqItem { Question = _localizer["Faq1Q"], Answer = _localizer["Faq1A"], IsExpanded = false },
+                new AboutViewModel.FaqItem { Question = _localizer["Faq2Q"], Answer = _localizer["Faq2A"], IsExpanded = true },
+                new AboutViewModel.FaqItem { Question = _localizer["Faq3Q"], Answer = _localizer["Faq3A"], IsExpanded = false },
+                new AboutViewModel.FaqItem { Question = _localizer["Faq4Q"], Answer = _localizer["Faq4A"], IsExpanded = false }
+            };
 
             return View(model);
         }
@@ -241,39 +152,35 @@ namespace Argitis.Controllers
             return View(model);
         }
 
-        // POST: /Home/Contact (обработка формы)
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Contact(ContactFormModel model)
         {
             if (!ModelState.IsValid)
             {
-                // Возвращаем ту же страницу с ошибками
                 var viewModel = new ContactViewModel();
                 return View(viewModel);
             }
 
-            // Сохранить в БД
-            // _context.ContactMessages.Add(model);
-            // await _context.SaveChangesAsync();
+            // Сохранить в БД...
 
-            // Отправить email администратору
+            // Отправить email администратору (ЗАМЕНИТЕ НА ВАШ EMAIL)
             try
             {
                 var adminEmail = new EmailDto
                 {
-                    ToEmail = "admin@groupeargitis.com",
+                    ToEmail = "admin@veltisgroup.com", // Замените на ваш реальный email
                     ToName = "Administrator",
                     Subject = $"📝 Новое сообщение от {model.Name}",
                     Body = $@"
-                <h2>Новое сообщение из формы контакта</h2>
-                <p><strong>Имя:</strong> {model.Name}</p>
-                <p><strong>Email:</strong> {model.Email}</p>
-                <p><strong>Телефон:</strong> {model.Phone}</p>
-                <p><strong>Сообщение:</strong></p>
-                <p>{model.Message}</p>
-                <p><strong>Дата:</strong> {DateTime.Now:dd.MM.yyyy HH:mm}</p>
-            "
+                        <h2>Новое сообщение из формы контакта</h2>
+                        <p><strong>Имя:</strong> {model.Name}</p>
+                        <p><strong>Email:</strong> {model.Email}</p>
+                        <p><strong>Телефон:</strong> {model.Phone}</p>
+                        <p><strong>Сообщение:</strong></p>
+                        <p>{model.Message}</p>
+                        <p><strong>Дата:</strong> {DateTime.Now:dd.MM.yyyy HH:mm}</p>
+                    "
                 };
                 await _emailService.SendEmailAsync(adminEmail);
             }
@@ -282,12 +189,10 @@ namespace Argitis.Controllers
                 Console.WriteLine($"Ошибка отправки email: {ex.Message}");
             }
 
-            TempData["SuccessMessage"] = "Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.";
-
+            TempData["SuccessMessageKey"] = "ContactSuccessMessage";
             return RedirectToAction("Contact");
         }
 
-        // GET: /Home/Appointment
         [HttpGet]
         public IActionResult Appointment()
         {
@@ -295,12 +200,10 @@ namespace Argitis.Controllers
             return View(model);
         }
 
-        // POST: /Home/Appointment
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Appointment(LoanRequest model)
         {
-            // Ручная проверка чекбокса
             if (model.Agree != "true" && model.Agree != "on")
             {
                 ModelState.AddModelError("Agree", "Вы должны принять условия");
@@ -312,18 +215,13 @@ namespace Argitis.Controllers
                 return View(model);
             }
 
-            // Сохранить в БД
-            // _context.LoanRequests.Add(model);
-            // await _context.SaveChangesAsync();
+            // Сохранить в БД...
 
-            // Рассчитываем ежемесячный платёж
             decimal monthlyPayment = CalculateMonthlyPayment(model.Amount, 2.5m, model.Period);
             decimal totalAmount = monthlyPayment * model.Period;
 
-            // Генерируем ID заявки
             string requestId = $"REQ-{DateTime.Now:yyyyMMdd}-{Guid.NewGuid().ToString().Substring(0, 8).ToUpper()}";
 
-            // Создаём LoanConfirmationDto для email
             var loanDto = new LoanConfirmationDto
             {
                 RequestId = requestId,
@@ -338,10 +236,9 @@ namespace Argitis.Controllers
                 InterestRate = 2.5m,
                 MonthlyPayment = monthlyPayment,
                 TotalAmount = totalAmount,
-                Language = "en" // можно заменить на model.Language, если добавите в модель
+                Language = "en"
             };
 
-            // Создаём модель для страницы благодарности
             var thankYouModel = new ThankYouViewModel
             {
                 RequestId = requestId,
@@ -355,35 +252,34 @@ namespace Argitis.Controllers
                 Phone = model.Phone
             };
 
-            // Отправляем email клиенту
+            // Отправляем email клиенту (ЗАМЕНИТЕ НА ВАШ EMAIL)
             try
             {
                 var clientEmail = new EmailDto
                 {
                     ToEmail = model.Email,
                     ToName = model.Name,
-                    Subject = "✅ Your loan application has been received - GROUPE-ARGITIS",
+                    Subject = "✅ Your loan application has been received - VeltisGroup",
                     Body = _emailService.BuildLoanConfirmationEmail(
                         loanDto,
-                        "GROUPE-ARGITIS",
-                        "fafimi8425@acoxs.com",
-                        "en" // язык
+                        "VeltisGroup",
+                        "contact@veltisgroup.com", // Замените на ваш email
+                        "en"
                     )
                 };
                 await _emailService.SendEmailAsync(clientEmail);
             }
             catch (Exception ex)
             {
-                // Логировать ошибку, но не прерывать процесс
                 Console.WriteLine($"Ошибка отправки email клиенту: {ex.Message}");
             }
 
-            // Отправляем email администратору (опционально)
+            // Отправляем email администратору (ЗАМЕНИТЕ НА ВАШ EMAIL)
             try
             {
                 var adminEmail = new EmailDto
                 {
-                    ToEmail = "fafimi8425@acoxs.com",
+                    ToEmail = "admin@veltisgroup.com", // Замените на ваш реальный email
                     ToName = "Administrator",
                     Subject = $"📝 New loan application - {model.Name}",
                     Body = _emailService.BuildAdminNotificationEmail(
@@ -398,25 +294,13 @@ namespace Argitis.Controllers
                 Console.WriteLine($"Ошибка отправки email администратору: {ex.Message}");
             }
 
-            TempData["SuccessMessage"] = "Ваша заявка успешно отправлена!";
-
+            //TempData["SuccessMessageKey"] = "ContactSuccessMessage";
             return RedirectToAction("AppointmentSuccess", thankYouModel);
-        }
-
-        // Вспомогательный метод для расчёта ежемесячного платежа
-        private decimal CalculateMonthlyPayment(decimal principal, decimal annualRate, int months)
-        {
-            decimal monthlyRate = annualRate / 12 / 100;
-            if (monthlyRate == 0) return principal / months;
-
-            decimal factor = (decimal)Math.Pow((double)(1 + monthlyRate), months);
-            return principal * monthlyRate * factor / (factor - 1);
         }
 
         [HttpGet]
         public IActionResult AppointmentSuccess(ThankYouViewModel model)
         {
-            // Если модель пустая (например, прямой переход на страницу), создаём заглушку
             if (string.IsNullOrEmpty(model.ClientName))
             {
                 model.ClientName = "Клиент";
@@ -427,75 +311,16 @@ namespace Argitis.Controllers
                 model.TotalAmount = 10135.93m;
                 model.RequestId = $"REQ-{DateTime.Now:yyyyMMdd}-{Guid.NewGuid().ToString().Substring(0, 8).ToUpper()}";
             }
-
             return View(model);
         }
 
-        // GET: /Home/About
-        [HttpGet]
-        public IActionResult About()
+        private decimal CalculateMonthlyPayment(decimal principal, decimal annualRate, int months)
         {
-            var model = new AboutViewModel();
+            decimal monthlyRate = annualRate / 12 / 100;
+            if (monthlyRate == 0) return principal / months;
 
-            // Заполняем отзывы
-            model.Testimonials = new List<AboutViewModel.TestimonialItem>
-    {
-        new AboutViewModel.TestimonialItem
-        {
-            Quote = "Благодаря GROUPE-ARGITIS я смог финансировать свой новый автомобиль без стресса. Команда была очень профессиональной и внимательной.",
-            Author = "Г-жа Дюпон",
-            Role = "Учитель"
-        },
-        new AboutViewModel.TestimonialItem
-        {
-            Quote = "Я объединил свои кредиты, и теперь у меня есть ежемесячный платеж, соответствующий моему бюджету. Спасибо всей команде за их поддержку!",
-            Author = "Г-н Мартен",
-            Role = "Бухгалтер"
-        },
-        new AboutViewModel.TestimonialItem
-        {
-            Quote = "Обслуживание клиентов было отличным. Персонал был дружелюбным и ответил на все мои вопросы.",
-            Author = "Г-н Бернар",
-            Role = "Водитель"
-        },
-        new AboutViewModel.TestimonialItem
-        {
-            Quote = "Мне понравилась прозрачность и скорость обслуживания. GROUPE-ARGITIS поддерживала меня на каждом этапе моей заявки на кредит.",
-            Author = "Michael L.",
-            Role = "Торговый представитель"
-        }
-    };
-
-            // Заполняем FAQ
-            model.FaqItems = new List<AboutViewModel.FaqItem>
-    {
-        new AboutViewModel.FaqItem
-        {
-            Question = "Персональный кредит",
-            Answer = "Наши персональные кредиты помогают вам достичь ваших финансовых целей по конкурентоспособным процентным ставкам.",
-            IsExpanded = false
-        },
-        new AboutViewModel.FaqItem
-        {
-            Question = "Автокредит",
-            Answer = "Автокредит - это решение для покупки нового или подержанного автомобиля. Мы предлагаем гибкие условия.",
-            IsExpanded = true
-        },
-        new AboutViewModel.FaqItem
-        {
-            Question = "Ипотечный кредит",
-            Answer = "Наши ипотечные кредиты помогают вам осуществить вашу мечту о собственности. Зачем арендовать, когда можно купить?",
-            IsExpanded = false
-        },
-        new AboutViewModel.FaqItem
-        {
-            Question = "Финансирование обучения",
-            Answer = "",
-            IsExpanded = false
-        }
-    };
-
-            return View(model);
+            decimal factor = (decimal)Math.Pow((double)(1 + monthlyRate), months);
+            return principal * monthlyRate * factor / (factor - 1);
         }
     }
 }

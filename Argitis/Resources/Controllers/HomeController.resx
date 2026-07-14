@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="PersonalLoan" xml:space="preserve">
+    <value>Personal Loan</value>
+  </data>
+	<data name="PersonalLoanDesc" xml:space="preserve">
+    <value>Our personal loans help you achieve your financial goals at competitive interest rates.</value>
+  </data>
+	<data name="CarLoan" xml:space="preserve">
+    <value>Car Loan</value>
+  </data>
+	<data name="CarLoanDesc" xml:space="preserve">
+    <value>Car loan is a solution for buying a new or used car. We offer flexible terms.</value>
+  </data>
+	<data name="MortgageLoan" xml:space="preserve">
+    <value>Mortgage Loan</value>
+  </data>
+	<data name="MortgageLoanDesc" xml:space="preserve">
+    <value>Buy your dream home with our personalized and secure mortgage solution.</value>
+  </data>
+	<data name="InvestmentLoan" xml:space="preserve">
+    <value>Investment Loan</value>
+  </data>
+	<data name="InvestmentLoanDesc" xml:space="preserve">
+    <value>Investment loan is suitable for clients who want to develop their investments or launch new projects.</value>
+  </data>
+	<data name="DebtConsolidation" xml:space="preserve">
+    <value>Debt Consolidation</value>
+  </data>
+	<data name="DebtConsolidationDesc" xml:space="preserve">
+    <value>Combine your loans and take advantage of better terms to optimize your budget.</value>
+  </data>
+	<data name="Refinancing" xml:space="preserve">
+    <value>Refinancing</value>
+  </data>
+	<data name="RefinancingDesc" xml:space="preserve">
+    <value>Our personal loans help you achieve your financial goals at competitive interest rates.</value>
+  </data>
+
+	<!-- Отзывы -->
+	<data name="Testimonial1Quote" xml:space="preserve">
+    <value>Thanks to GROUPE-ARGITIS, I was able to finance my new car without stress. The team was very professional and attentive.</value>
+  </data>
+	<data name="Testimonial1Author" xml:space="preserve">
+    <value>Mrs. Dupont</value>
+  </data>
+	<data name="Testimonial1Role" xml:space="preserve">
+    <value>Teacher</value>
+  </data>
+	<data name="Testimonial2Quote" xml:space="preserve">
+    <value>I consolidated my loans and now I have a monthly payment that fits my budget. Thank you to the whole team for their support!</value>
+  </data>
+	<data name="Testimonial2Author" xml:space="preserve">
+    <value>Mr. Martin</value>
+  </data>
+	<data name="Testimonial2Role" xml:space="preserve">
+    <value>Accountant</value>
+  </data>
+	<data name="Testimonial3Quote" xml:space="preserve">
+    <value>Customer service was excellent. The staff was friendly and answered all my questions.</value>
+  </data>
+	<data name="Testimonial3Author" xml:space="preserve">
+    <value>Mr. Bernard</value>
+  </data>
+	<data name="Testimonial3Role" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+	<data name="Testimonial4Quote" xml:space="preserve">
+    <value>I liked the transparency and speed of service. GROUPE-ARGITIS supported me at every stage of my loan application.</value>
+  </data>
+	<data name="Testimonial4Author" xml:space="preserve">
+    <value>Michael L.</value>
+  </data>
+	<data name="Testimonial4Role" xml:space="preserve">
+    <value>Sales Representative</value>
+  </data>
+	<data name="Testimonial5Quote" xml:space="preserve">
+    <value>Very fast approval and convenient service. I recommend to everyone!</value>
+  </data>
+	<data name="Testimonial5Author" xml:space="preserve">
+    <value>Anna K.</value>
+  </data>
+	<data name="Testimonial5Role" xml:space="preserve">
+    <value>Designer</value>
+  </data>
+	<data name="Testimonial6Quote" xml:space="preserve">
+    <value>Thanks to the team for help with the mortgage. The process was transparent and fast.</value>
+  </data>
+	<data name="Testimonial6Author" xml:space="preserve">
+    <value>Dmitry S.</value>
+  </data>
+	<data name="Testimonial6Role" xml:space="preserve">
+    <value>Engineer</value>
+  </data>
+
+	<!-- Шаги процесса -->
+	<data name="Step1Title" xml:space="preserve">
+    <value>Submit your application</value>
+  </data>
+	<data name="Step1Desc" xml:space="preserve">
+    <value>Fill out the application form online. Simple, fast and secure.</value>
+  </data>
+	<data name="Step2Title" xml:space="preserve">
+    <value>We review your application</value>
+  </data>
+	<data name="Step2Desc" xml:space="preserve">
+    <value>We review your case for free and inform you of the result.</value>
+  </data>
+	<data name="Step3Title" xml:space="preserve">
+    <value>Application processing</value>
+  </data>
+	<data name="Step3Desc" xml:space="preserve">
+    <value>We will contact you for additional information and evaluate your application.</value>
+  </data>
+	<data name="Step4Title" xml:space="preserve">
+    <value>Get your money</value>
+  </data>
+	<data name="Step4Desc" xml:space="preserve">
+    <value>After approval, the money will be transferred directly to your account.</value>
+  </data>
+
+	<!-- FAQ -->
+	<data name="Faq1Q" xml:space="preserve">
+    <value>Personal loan</value>
+  </data>
+	<data name="Faq1A" xml:space="preserve">
+    <value>Our personal loans help you achieve your financial goals at competitive interest rates.</value>
+  </data>
+	<data name="Faq2Q" xml:space="preserve">
+    <value>Car loan</value>
+  </data>
+	<data name="Faq2A" xml:space="preserve">
+    <value>Car loan is a solution for buying a new or used car. We offer flexible terms.</value>
+  </data>
+	<data name="Faq3Q" xml:space="preserve">
+    <value>Mortgage loan</value>
+  </data>
+	<data name="Faq3A" xml:space="preserve">
+    <value>Our mortgage loans help you realize your dream of homeownership. Why rent when you can buy?</value>
+  </data>
+	<data name="Faq4Q" xml:space="preserve">
+    <value>Education financing</value>
+  </data>
+	<data name="Faq4A" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ContactSuccessMessage" xml:space="preserve">
+    <value>Your message has been sent successfully! We will contact you shortly.</value>
+</data>
+</root>
