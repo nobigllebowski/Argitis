@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
-<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru"> <![endif]-->
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="@Context.Request.Cookies["lang"]" lang="@Context.Request.Cookies["lang"]"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="@Context.Request.Cookies["lang"]" lang="@Context.Request.Cookies["lang"]">
 <!--<![endif]-->
 <head>
     <!-- Meta Pixel Code -->
@@ -33,44 +33,24 @@
 
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <!--[if IE ]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><![endif]-->
     <title>@ViewData["Title"] - GROUPE-ARGITIS</title>
     <meta name="description" content="@ViewData["MetaDescription"]">
     <meta name="keywords" content="@ViewData["MetaKeywords"]">
     <meta name="author" content="GROUPE-ARGITIS">
 
-    <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- Bootstrap -->
     <link rel="stylesheet" href="~/css/bootstrap.css">
-
-    <!-- Animate -->
     <link rel="stylesheet" href="~/css/animate.min.css">
-
-    <!-- Swiper -->
     <link rel="stylesheet" href="~/css/swiper-bundle.min.css">
-
-    <!-- Odometer -->
     <link rel="stylesheet" href="~/css/odometer.min.css">
-
-    <!-- Theme Style -->
     <link rel="stylesheet" href="~/css/styles.css">
-
-    <!-- Custom Premium Home Styles -->
     <link rel="stylesheet" href="~/css/custom-home-styles.css">
-
-    <!-- Custom Premium Footer Styles -->
     <link rel="stylesheet" href="~/css/custom-footer-styles.css">
-
-    <!-- Icon -->
     <link rel="stylesheet" href="~/css/style.css">
 
-    <!-- Favicon and Touch Icons -->
     <link rel="shortcut icon" href="~/images/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="~/images/favicon.png">
 
-    <!-- Custom CSS for Language Selector -->
     <style>
         .tf-languages .btn-select {
         display: flex;
@@ -81,9 +61,11 @@
         transition: all 0.3s ease;
         cursor: pointer;
         }
+
         .tf-languages .btn-select:hover {
         background-color: rgba(60, 33, 14, 0.05);
         }
+
         .tf-languages .flag-icon {
         width: 18px;
         height: 12px;
@@ -91,10 +73,12 @@
         border-radius: 2px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
+
         .tf-languages .lang-text {
         font-weight: 600;
         color: #1E3A8A;
         }
+
         .tf-languages .dropdown-menu {
         min-width: 160px;
         padding: 8px 0;
@@ -102,6 +86,7 @@
         border-radius: 8px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
+
         .tf-languages .select-item {
         display: flex;
         align-items: center;
@@ -110,13 +95,16 @@
         cursor: pointer;
         transition: all 0.2s ease;
         }
+
         .tf-languages .select-item:hover {
         background-color: rgba(60, 33, 14, 0.05);
         }
+
         .tf-languages .select-item.active {
         background-color: rgba(60, 33, 14, 0.1);
         font-weight: 600;
         }
+
         .tf-languages .select-item .flag-icon {
         width: 20px;
         height: 14px;
@@ -124,29 +112,35 @@
         border-radius: 2px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
+
         .tf-languages .select-item .text-value-item {
         color: #1E3A8A;
         font-size: 14px;
         }
+
         .mobile-button {
         position: relative;
         z-index: 10000 !important;
         cursor: pointer;
         pointer-events: auto;
         }
+
         .header-right .tf-languages {
         margin-right: 20px;
         position: relative;
         z-index: 1000;
         }
+
         .btn-get {
         margin-left: 20px;
         }
+
         .header-right {
         display: flex;
         align-items: center;
         gap: 20px;
         }
+
         .header-right .mobile-button {
         display: flex;
         align-items: center;
@@ -157,18 +151,22 @@
         border: none;
         outline: none;
         }
+
         .header-right .mobile-button i {
         font-size: 24px;
         color: #1E3A8A;
         }
+
         .header-right .btn-get .tf-btn,
         .header-right .btn-get .tf-btn span {
         color: #fff !important;
         }
+
         .tf-languages .btn-select .lang-text,
         .tf-languages .btn-select i {
         color: #fff !important;
         }
+
         .header.scrollHeader .tf-languages .btn-select .lang-text,
         .header.header-bg .tf-languages .btn-select .lang-text,
         .header.scrollHeader .tf-languages .btn-select i,
@@ -179,12 +177,8 @@
 
     @RenderSection("Styles", required: false)
 </head>
-
 <body>
-    <!-- wrapper -->
     <div id="wrapper">
-
-        <!-- .preload -->
         <div id="loading">
             <div id="loading-center">
                 <div class="loader-container">
@@ -196,27 +190,21 @@
                     </div>
                 </div>
             </div>
-        </div><!-- /.preload -->
-        <!-- .header -->
+        </div>
+
         @await Html.PartialAsync("_Header")
-
-        <!-- Основной контент -->
         @RenderBody()
-
-        <!-- .footer -->
         @await Html.PartialAsync("_Footer")
+    </div>
 
-    </div><!-- /.wrapper -->
-    <!-- .progress -->
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
         </svg>
-    </div><!-- /.progress -->
-    <!-- .mobile-nav -->
+    </div>
+
     @await Html.PartialAsync("_MobileMenu")
 
-    <!-- .open-search -->
     <div class="offcanvas offcanvas-top offcanvas-search" id="canvasSearch">
         <button class="btn-close-search" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
             <i class="icon-close"></i>
@@ -242,8 +230,8 @@
                 </div>
             </div>
         </div>
-    </div><!-- /.open-search -->
-    <!-- Javascript -->
+    </div>
+
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/js/jquery.min.js"></script>
     <script src="~/js/lazysize.min.js"></script>

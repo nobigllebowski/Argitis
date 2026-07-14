@@ -36,6 +36,7 @@
             public string Quote { get; set; }
             public string Author { get; set; }
             public string Role { get; set; }
+            public string ImageUrl { get; set; }
         }
 
         public class ProcessStep

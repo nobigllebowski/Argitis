@@ -73,25 +73,43 @@ namespace Argitis.Controllers
                 {
                     Quote = "Благодаря GROUPE-ARGITIS я смог финансировать свой новый автомобиль без стресса. Команда была очень профессиональной и внимательной.",
                     Author = "Г-жа Дюпон",
-                    Role = "Учитель"
+                    Role = "Учитель",
+                    ImageUrl = "https://i.pravatar.cc/150?img=1" // Женщина 1
                 },
                 new HomeViewModel.TestimonialItem
                 {
                     Quote = "Я объединил свои кредиты, и теперь у меня есть ежемесячный платеж, соответствующий моему бюджету. Спасибо всей команде за их поддержку!",
                     Author = "Г-н Мартен",
-                    Role = "Бухгалтер"
+                    Role = "Бухгалтер",
+                    ImageUrl = "https://i.pravatar.cc/150?img=11" // Мужчина 1
                 },
                 new HomeViewModel.TestimonialItem
                 {
                     Quote = "Обслуживание клиентов было отличным. Персонал был дружелюбным и ответил на все мои вопросы.",
                     Author = "Г-н Бернар",
-                    Role = "Водитель"
+                    Role = "Водитель",
+                    ImageUrl = "https://i.pravatar.cc/150?img=12" // Мужчина 2
                 },
                 new HomeViewModel.TestimonialItem
                 {
                     Quote = "Мне понравилась прозрачность и скорость обслуживания. GROUPE-ARGITIS поддерживала меня на каждом этапе моей заявки на кредит.",
                     Author = "Michael L.",
-                    Role = "Торговый представитель"
+                    Role = "Торговый представитель",
+                    ImageUrl = "https://i.pravatar.cc/150?img=13" // Мужчина 3
+                },
+                new HomeViewModel.TestimonialItem
+                {
+                    Quote = "Очень быстрое одобрение и удобный сервис. Рекомендую всем!",
+                    Author = "Анна К.",
+                    Role = "Дизайнер",
+                    ImageUrl = "https://i.pravatar.cc/150?img=5" // Женщина 2
+                },
+                new HomeViewModel.TestimonialItem
+                {
+                    Quote = "Спасибо команде за помощь с ипотекой. Процесс был прозрачным и быстрым.",
+                    Author = "Дмитрий С.",
+                    Role = "Инженер",
+                    ImageUrl = "https://i.pravatar.cc/150?img=4" // Мужчина 4
                 }
             };
 
