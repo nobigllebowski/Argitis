@@ -245,4 +245,22 @@
 	<data name="ContactSuccessMessage" xml:space="preserve">
     <value>Your message has been sent successfully! We will contact you shortly.</value>
 </data>
+	<data name="AboutHeading" xml:space="preserve">
+    <value>Your reliable partner</value>
+</data>
+	<data name="AboutDescription" xml:space="preserve">
+    <value>We specialize in financial services for individuals and professionals. Our experience and reliability make us a trusted partner.</value>
+</data>
+	<data name="MissionTitle" xml:space="preserve">
+    <value>Our Mission</value>
+</data>
+	<data name="MissionText" xml:space="preserve">
+    <value>To help our clients achieve their financial goals by offering flexible and competitive financial solutions.</value>
+</data>
+	<data name="VisionTitle" xml:space="preserve">
+    <value>Our Vision</value>
+</data>
+	<data name="VisionText" xml:space="preserve">
+    <value>To be a trusted partner who helps their clients develop by offering quality financial services.</value>
+</data>
 </root>

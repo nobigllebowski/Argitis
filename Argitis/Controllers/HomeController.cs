@@ -3,7 +3,6 @@ using Argitis.Models;
 using Argitis.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization; // ДОБАВЛЕНО для локализации в контроллере
-using System.Globalization;
 
 namespace Argitis.Controllers
 {
@@ -126,6 +125,15 @@ namespace Argitis.Controllers
         {
             var model = new AboutViewModel();
 
+            // Заполняем заголовки и описания через локализатор
+            model.Heading = _localizer["AboutHeading"];
+            model.Description = _localizer["AboutDescription"];
+            model.MissionTitle = _localizer["MissionTitle"];
+            model.MissionText = _localizer["MissionText"];
+            model.VisionTitle = _localizer["VisionTitle"];
+            model.VisionText = _localizer["VisionText"];
+
+            // Отзывы (данные берутся из HomeController.resx)
             model.Testimonials = new List<AboutViewModel.TestimonialItem>
             {
                 new AboutViewModel.TestimonialItem { Quote = _localizer["Testimonial1Quote"], Author = _localizer["Testimonial1Author"], Role = _localizer["Testimonial1Role"] },
@@ -134,7 +142,8 @@ namespace Argitis.Controllers
                 new AboutViewModel.TestimonialItem { Quote = _localizer["Testimonial4Quote"], Author = _localizer["Testimonial4Author"], Role = _localizer["Testimonial4Role"] }
             };
 
-            model.FaqItems = new List<AboutViewModel.FaqItem>
+                    // FAQ
+                    model.FaqItems = new List<AboutViewModel.FaqItem>
             {
                 new AboutViewModel.FaqItem { Question = _localizer["Faq1Q"], Answer = _localizer["Faq1A"], IsExpanded = false },
                 new AboutViewModel.FaqItem { Question = _localizer["Faq2Q"], Answer = _localizer["Faq2A"], IsExpanded = true },

@@ -8,11 +8,10 @@
     ViewData["MetaKeywords"] = Model.MetaKeywords;
 }
 
-
 <div class="main-content page-contact">
-    <!-- Карта и контактная информация (из ContactViewModel) -->
+    <!-- Карта и контактная информация -->
     <div class="map-box relative">
-        <img src="/images/contact.webp" alt="Карта" class="w-100 h-100 object-fit-cover">
+        <img src="~/images/contact.webp" alt="@Localizer["MapAlt"]" class="w-100 h-100 object-fit-cover">
     </div>
 
     <section class="section-contact page-contact">
@@ -22,10 +21,10 @@
                     <div class="wrap-content">
                         <div class="box-contact">
                             <div class="heading-section text-start">
-                                <p class="text-2 sub">Контакты</p>
-                                <h3>Свяжитесь с GROUPE-ARGITIS</h3>
+                                <p class="text-2 sub">@Localizer["Contacts"]</p>
+                                <h3>@Localizer["ContactHeading"]</h3>
                                 <p class="description text-1 lh-30">
-                                    Мы всегда готовы помочь вашему бизнесу. Давайте поговорим вместе.
+                                    @Localizer["ContactDescription"]
                                 </p>
                             </div>
                             <ul class="list-info">
@@ -35,7 +34,7 @@
                             </ul>
                         </div>
 
-                        <!-- ФОРМА: здесь НЕТ asp-for, только name="" -->
+                        <!-- ФОРМА -->
                         <form class="form-consultation" method="post" asp-action="Contact" id="contactform">
                             @Html.AntiForgeryToken()
 
@@ -47,26 +46,26 @@
                                 </div>
                             }
 
-                            <h4 class="mb-20 text-center">Напишите нам</h4>
+                            <h4 class="mb-20 text-center">@Localizer["WriteToUs"]</h4>
 
                             <fieldset class="name">
-                                <input type="text" name="Name" class="tf-input style-1" placeholder="Ваше полное имя*" required>
+                                <input type="text" name="Name" class="tf-input style-1" placeholder="@Localizer["FullNamePlaceholder"]" required>
                             </fieldset>
 
                             <fieldset class="email">
-                                <input type="email" name="Email" class="tf-input style-1" placeholder="Ваш email*" required>
+                                <input type="email" name="Email" class="tf-input style-1" placeholder="@Localizer["EmailPlaceholder"]" required>
                             </fieldset>
 
                             <fieldset class="phone">
-                                <input type="tel" name="Phone" class="tf-input style-1" placeholder="Ваш телефон*" required>
+                                <input type="tel" name="Phone" class="tf-input style-1" placeholder="@Localizer["PhonePlaceholder"]" required>
                             </fieldset>
 
                             <fieldset class="message">
-                                <textarea name="Message" class="tf-input" rows="4" placeholder="Ваше сообщение*" required></textarea>
+                                <textarea name="Message" class="tf-input" rows="4" placeholder="@Localizer["MessagePlaceholder"]" required></textarea>
                             </fieldset>
 
                             <button class="tf-btn style-default btn-color-secondary pd-40 boder-8" type="submit">
-                                <span>Отправить сообщение</span>
+                                <span>@Localizer["SendMessage"]</span>
                             </button>
                         </form>
                     </div>

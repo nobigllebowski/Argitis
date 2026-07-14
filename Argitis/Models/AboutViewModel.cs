@@ -2,22 +2,22 @@
 {
     public class AboutViewModel
     {
-        public string Title { get; set; } = "About - GROUPE-ARGITIS";
+        public string Title { get; set; } = "About - VeltisGroup";
         public string MetaDescription { get; set; } = "We specialize in financial services for individuals and professionals.";
         public string MetaKeywords { get; set; } = "Finance, Loan, Personal loan, Home loan, Mortgage Loan, Auto Credit, Mortgage Credit, Education Financing, Loan information, Requested amount";
 
-        // Данные для секций
-        public string Heading { get; set; } = "Ваш надежный партнер";
-        public string Description { get; set; } = "Мы специализируемся на финансовых услугах для частных лиц и профессионалов. Наш опыт и надежность делают нас надежным партнером.";
+        // Данные для секций (будут заполняться через контроллер)
+        public string Heading { get; set; } = "";
+        public string Description { get; set; } = "";
 
         // Миссия и видение
-        public string MissionTitle { get; set; } = "Наша миссия";
-        public string MissionText { get; set; } = "Помогать нашим клиентам достигать их финансовых целей, предлагая гибкие и конкурентоспособные финансовые решения.";
+        public string MissionTitle { get; set; } = "";
+        public string MissionText { get; set; } = "";
 
-        public string VisionTitle { get; set; } = "Наше видение";
-        public string VisionText { get; set; } = "Быть надежным партнером, который помогает своим клиентам развиваться, предлагая качественные финансовые услуги.";
+        public string VisionTitle { get; set; } = "";
+        public string VisionText { get; set; } = "";
 
-        // Счетчики
+        // Счетчики (числа не переводятся)
         public int ExperienceYears { get; set; } = 10;
         public int HappyClients { get; set; } = 5000;
         public int Reviews { get; set; } = 20;

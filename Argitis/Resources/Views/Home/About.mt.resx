@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Home" xml:space="preserve">
+    <value>Paġna ewlenija</value>
+  </data>
+	<data name="AboutUs" xml:space="preserve">
+    <value>Dwar</value>
+  </data>
+	<data name="AboutPageTitle" xml:space="preserve">
+    <value>Dwar</value>
+  </data>
+	<data name="MissionTitle" xml:space="preserve">
+    <value>Il-missjoni tagħna</value>
+  </data>
+	<data name="MissionText" xml:space="preserve">
+    <value>Biex ngħinu lill-klijenti tagħna jilħqu l-għanijiet finanzjarji tagħhom billi noffru soluzzjonijiet finanzjarji flessibbli u kompetittivi.</value>
+  </data>
+	<data name="VisionTitle" xml:space="preserve">
+    <value>Il-viżjoni tagħna</value>
+  </data>
+	<data name="VisionText" xml:space="preserve">
+    <value>Li nkunu sieħeb ta' fiduċja li jgħin lill-klijenti tiegħu jiżviluppaw billi joffri servizzi finanzjarji ta' kwalità.</value>
+  </data>
+	<data name="RequestCredit" xml:space="preserve">
+    <value>Talab kreditu</value>
+  </data>
+	<data name="Years" xml:space="preserve">
+    <value>Snin</value>
+  </data>
+	<data name="YearsExp" xml:space="preserve">
+    <value>Snin ta' esperjenza</value>
+  </data>
+	<data name="HappyClients" xml:space="preserve">
+    <value>Klijenti sodisfatti</value>
+  </data>
+	<data name="Reviews" xml:space="preserve">
+    <value>Reviżjonijiet tal-klijenti</value>
+  </data>
+	<data name="Awards" xml:space="preserve">
+    <value>Premjijiet</value>
+  </data>
+	<data name="ReviewsTitle" xml:space="preserve">
+    <value>REVIŻJONIJIET TAL-KLIJENTI</value>
+  </data>
+	<data name="ReviewsHead" xml:space="preserve">
+    <value>Dak li jgħidu l-klijenti sodisfatti tagħna</value>
+  </data>
+	<data name="FaqWhy" xml:space="preserve">
+    <value>Għaliex tagħżel lilna?</value>
+  </data>
+	<data name="FaqHead" xml:space="preserve">
+    <value>Soluzzjonijiet ta' finanzjament flessibbli għall-bżonnijiet tiegħek!</value>
+  </data>
+	<data name="FaqDesc" xml:space="preserve">
+    <value>Aħna speċjalizzati f'servizzi finanzjarji f'reġjuni differenti tad-dinja fejn hemm bżonn.</value>
+  </data>
+	<data name="ContactReady" xml:space="preserve">
+    <value>Lest biex timplimenta l-proġetti tiegħek?</value>
+  </data>
+	<data name="ContactHead" xml:space="preserve">
+    <value>Ħu vantaġġ mis-soluzzjonijiet ta' finanzjament tagħna.</value>
+  </data>
+	<data name="ContactDesc" xml:space="preserve">
+    <value>Ngħinuk issib is-soluzzjoni ta' finanzjament it-tajba. Aħna qegħdin hawn biex nappoġġawk.</value>
+  </data>
+</root>

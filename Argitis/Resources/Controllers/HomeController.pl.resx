@@ -150,4 +150,22 @@
 	<data name="ContactSuccessMessage" xml:space="preserve">
     <value>Twoja wiadomość została wysłana pomyślnie! Skontaktujemy się z Tobą wkrótce.</value>
 </data>
+	<data name="AboutHeading" xml:space="preserve">
+    <value>Twój niezawodny partner</value>
+</data>
+	<data name="AboutDescription" xml:space="preserve">
+    <value>Specjalizujemy się w usługach finansowych dla osób fizycznych i profesjonalistów. Nasze doświadczenie i niezawodność czynią nas zaufanym partnerem.</value>
+</data>
+	<data name="MissionTitle" xml:space="preserve">
+    <value>Nasza misja</value>
+</data>
+	<data name="MissionText" xml:space="preserve">
+    <value>Pomagać naszym klientom osiągać cele finansowe, oferując elastyczne i konkurencyjne rozwiązania finansowe.</value>
+</data>
+	<data name="VisionTitle" xml:space="preserve">
+    <value>Nasza wizja</value>
+</data>
+	<data name="VisionText" xml:space="preserve">
+    <value>Być zaufanym partnerem, który pomaga swoim klientom rozwijać się, oferując wysokiej jakości usługi finansowe.</value>
+</data>
 </root>

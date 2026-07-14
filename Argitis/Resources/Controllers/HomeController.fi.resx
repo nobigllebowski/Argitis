@@ -150,4 +150,22 @@
 	<data name="ContactSuccessMessage" xml:space="preserve">
     <value>Viestisi on lähetetty onnistuneesti! Otamme sinuun yhteyttä pian.</value>
 </data>
+	<data name="AboutHeading" xml:space="preserve">
+    <value>Luotettava kumppanisi</value>
+</data>
+	<data name="AboutDescription" xml:space="preserve">
+    <value>Olemme erikoistuneet rahoituspalveluihin yksityishenkilöille ja ammattilaisille. Kokemuksemme ja luotettavuutemme tekevät meistä luotettavan kumppanin.</value>
+</data>
+	<data name="MissionTitle" xml:space="preserve">
+    <value>Tehtävämme</value>
+</data>
+	<data name="MissionText" xml:space="preserve">
+    <value>Auttaa asiakkaitamme saavuttamaan taloudelliset tavoitteensa tarjoamalla joustavia ja kilpailukykyisiä rahoitusratkaisuja.</value>
+</data>
+	<data name="VisionTitle" xml:space="preserve">
+    <value>Visomme</value>
+</data>
+	<data name="VisionText" xml:space="preserve">
+    <value>Olla luotettava kumppani, joka auttaa asiakkaitaan kehittymään tarjoamalla laadukkaita rahoituspalveluja.</value>
+</data>
 </root>

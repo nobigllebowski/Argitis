@@ -150,4 +150,22 @@
 	<data name="ContactSuccessMessage" xml:space="preserve">
     <value>Mesajul dumneavoastră a fost trimis cu succes! Vă vom contacta în curând.</value>
 </data>
+	<data name="AboutHeading" xml:space="preserve">
+    <value>Partenerul dumneavoastră de încredere</value>
+</data>
+	<data name="AboutDescription" xml:space="preserve">
+    <value>Suntem specializați în servicii financiare pentru persoane fizice și profesioniști. Experiența și fiabilitatea noastră ne fac un partener de încredere.</value>
+</data>
+	<data name="MissionTitle" xml:space="preserve">
+    <value>Misiunea noastră</value>
+</data>
+	<data name="MissionText" xml:space="preserve">
+    <value>Să ajutăm clienții noștri să își atingă obiectivele financiare oferind soluții financiare flexibile și competitive.</value>
+</data>
+	<data name="VisionTitle" xml:space="preserve">
+    <value>Viziunea noastră</value>
+</data>
+	<data name="VisionText" xml:space="preserve">
+    <value>Să fim un partener de încredere care își ajută clienții să se dezvolte oferind servicii financiare de calitate.</value>
+</data>
 </root>

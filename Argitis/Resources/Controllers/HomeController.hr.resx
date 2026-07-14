@@ -150,4 +150,22 @@
 	<data name="ContactSuccessMessage" xml:space="preserve">
     <value>Vaša poruka je uspješno poslana! Kontaktirat ćemo vas uskoro.</value>
 </data>
+	<data name="AboutHeading" xml:space="preserve">
+    <value>Vaš pouzdani partner</value>
+</data>
+	<data name="AboutDescription" xml:space="preserve">
+    <value>Specijaliziramo se za financijske usluge za fizičke osobe i profesionalce. Naše iskustvo i pouzdanost čine nas pouzdanim partnerom.</value>
+</data>
+	<data name="MissionTitle" xml:space="preserve">
+    <value>Naša misija</value>
+</data>
+	<data name="MissionText" xml:space="preserve">
+    <value>Pomoći našim klijentima da postignu svoje financijske ciljeve nudeći fleksibilna i konkurentna financijska rješenja.</value>
+</data>
+	<data name="VisionTitle" xml:space="preserve">
+    <value>Naša vizija</value>
+</data>
+	<data name="VisionText" xml:space="preserve">
+    <value>Biti pouzdan partner koji pomaže svojim klijentima da se razvijaju nudeći kvalitetne financijske usluge.</value>
+</data>
 </root>

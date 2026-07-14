@@ -150,4 +150,22 @@
 	<data name="ContactSuccessMessage" xml:space="preserve">
     <value>Uw bericht is succesvol verzonden! Wij nemen binnenkort contact met u op.</value>
 </data>
+	<data name="AboutHeading" xml:space="preserve">
+    <value>Uw betrouwbare partner</value>
+</data>
+	<data name="AboutDescription" xml:space="preserve">
+    <value>Wij zijn gespecialiseerd in financiële diensten voor particulieren en professionals. Onze ervaring en betrouwbaarheid maken ons een vertrouwde partner.</value>
+</data>
+	<data name="MissionTitle" xml:space="preserve">
+    <value>Onze missie</value>
+</data>
+	<data name="MissionText" xml:space="preserve">
+    <value>Onze klanten helpen hun financiële doelen te bereiken door flexibele en concurrerende financiële oplossingen aan te bieden.</value>
+</data>
+	<data name="VisionTitle" xml:space="preserve">
+    <value>Onze visie</value>
+</data>
+	<data name="VisionText" xml:space="preserve">
+    <value>Een vertrouwde partner zijn die zijn klanten helpt zich te ontwikkelen door kwalitatieve financiële diensten aan te bieden.</value>
+</data>
 </root>

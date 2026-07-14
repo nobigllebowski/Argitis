@@ -150,4 +150,22 @@
 	<data name="ContactSuccessMessage" xml:space="preserve">
     <value>Il-messaġġ tiegħek intbagħat b'suċċess! Aħna nikkuntattjawek dalwaqt.</value>
 </data>
+	<data name="AboutHeading" xml:space="preserve">
+    <value>Is-sieħeb fiduċjuż tiegħek</value>
+</data>
+	<data name="AboutDescription" xml:space="preserve">
+    <value>Aħna speċjalizzati f'servizzi finanzjarji għal individwi u professjonisti. L-esperjenza u l-affidabbiltà tagħna jagħmluna sieħeb ta' fiduċja.</value>
+</data>
+	<data name="MissionTitle" xml:space="preserve">
+    <value>Il-missjoni tagħna</value>
+</data>
+	<data name="MissionText" xml:space="preserve">
+    <value>Biex ngħinu lill-klijenti tagħna jilħqu l-għanijiet finanzjarji tagħhom billi noffru soluzzjonijiet finanzjarji flessibbli u kompetittivi.</value>
+</data>
+	<data name="VisionTitle" xml:space="preserve">
+    <value>Il-viżjoni tagħna</value>
+</data>
+	<data name="VisionText" xml:space="preserve">
+    <value>Li nkunu sieħeb ta' fiduċja li jgħin lill-klijenti tiegħu jiżviluppaw billi joffri servizzi finanzjarji ta' kwalità.</value>
+</data>
 </root>

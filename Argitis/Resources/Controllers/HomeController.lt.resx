@@ -150,4 +150,22 @@
 	<data name="ContactSuccessMessage" xml:space="preserve">
     <value>Jūsų pranešimas sėkmingai išsiųstas! Su jumis susisieksime artimiausiu metu.</value>
 </data>
+	<data name="AboutHeading" xml:space="preserve">
+    <value>Jūsų patikimas partneris</value>
+</data>
+	<data name="AboutDescription" xml:space="preserve">
+    <value>Mes specializuojamės finansinėmis paslaugomis fiziniams asmenims ir profesionalams. Mūsų patirtis ir patikimumas daro mus patikimu partneriu.</value>
+</data>
+	<data name="MissionTitle" xml:space="preserve">
+    <value>Mūsų misija</value>
+</data>
+	<data name="MissionText" xml:space="preserve">
+    <value>Padėti mūsų klientams pasiekti finansinius tikslus, siūlant lanksčius ir konkurencingus finansinius sprendimus.</value>
+</data>
+	<data name="VisionTitle" xml:space="preserve">
+    <value>Mūsų vizija</value>
+</data>
+	<data name="VisionText" xml:space="preserve">
+    <value>Būti patikimu partneriu, kuris padeda savo klientams tobulėti teikdamas kokybiškas finansines paslaugas.</value>
+</data>
 </root>

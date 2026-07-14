@@ -150,4 +150,22 @@
 	<data name="ContactSuccessMessage" xml:space="preserve">
     <value>¡Tu mensaje ha sido enviado con éxito! Nos pondremos en contacto contigo en breve.</value>
 </data>
+	<data name="AboutHeading" xml:space="preserve">
+    <value>Su socio de confianza</value>
+</data>
+	<data name="AboutDescription" xml:space="preserve">
+    <value>Nos especializamos en servicios financieros para particulares y profesionales. Nuestra experiencia y fiabilidad nos convierten en un socio de confianza.</value>
+</data>
+	<data name="MissionTitle" xml:space="preserve">
+    <value>Nuestra misión</value>
+</data>
+	<data name="MissionText" xml:space="preserve">
+    <value>Ayudar a nuestros clientes a alcanzar sus objetivos financieros ofreciendo soluciones financieras flexibles y competitivas.</value>
+</data>
+	<data name="VisionTitle" xml:space="preserve">
+    <value>Nuestra visión</value>
+</data>
+	<data name="VisionText" xml:space="preserve">
+    <value>Ser un socio de confianza que ayuda a sus clientes a desarrollarse ofreciendo servicios financieros de calidad.</value>
+</data>
 </root>

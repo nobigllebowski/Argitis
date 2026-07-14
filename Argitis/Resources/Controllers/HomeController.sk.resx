@@ -151,4 +151,22 @@
 	<data name="ContactSuccessMessage" xml:space="preserve">
     <value>Vaša správa bola úspešne odoslaná! Budeme vás kontaktovať čoskoro.</value>
 </data>
+	<data name="AboutHeading" xml:space="preserve">
+    <value>Váš spoľahlivý partner</value>
+</data>
+	<data name="AboutDescription" xml:space="preserve">
+    <value>Špecializujeme sa na finančné služby pre fyzické osoby a profesionálov. Naše skúsenosti a spoľahlivosť z nás robia dôveryhodného partnera.</value>
+</data>
+	<data name="MissionTitle" xml:space="preserve">
+    <value>Naša misia</value>
+</data>
+	<data name="MissionText" xml:space="preserve">
+    <value>Pomôcť našim klientom dosiahnuť ich finančné ciele ponukou flexibilných a konkurencieschopných finančných riešení.</value>
+</data>
+	<data name="VisionTitle" xml:space="preserve">
+    <value>Naša vízia</value>
+</data>
+	<data name="VisionText" xml:space="preserve">
+    <value>Byť dôveryhodným partnerom, ktorý pomáha svojim klientom rozvíjať sa ponukou kvalitných finančných služieb.</value>
+</data>
 </root>
