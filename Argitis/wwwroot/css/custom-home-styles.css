@@ -618,3 +618,34 @@ h6 {
         padding: 40px 25px !important;
     }
 }
+
+/* Убираем верхний отступ, который создавал белую полосу */
+#header-main .header-inner-wrap .header-logo {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important; /* Если хотите убрать и нижний отступ */
+}
+
+/* Дополнительно: центрируем логотип по вертикали, чтобы он не прыгал */
+.header-logo .site-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+    /* ========================================= */
+    /*  Эффекты для логотипов                     */
+    /* ========================================= */
+
+    /* Для шапки (оставляем multiply, чтобы убрать белый фон, если он есть) */
+    .header-logo .site-logo img,
+    .header-logo-2 .site-logo img {
+        background: transparent !important;
+        mix-blend-mode: multiply !important;
+    }
+
+/* Для подвала (убираем multiply, чтобы белый цвет остался белым) */
+.footer-logo a img {
+    background: transparent !important;
+    mix-blend-mode: normal !important; /* Отключаем смешивание */
+    filter: brightness(0) invert(1); /* Добавляем безопасный фильтр, чтобы гарантировать белый цвет */
+}

@@ -177,6 +177,39 @@
         .header.header-bg .tf-languages .btn-select i {
         color: #1E3A8A !important;
         }
+
+        /* ========================================= */
+        /*  FIX: ЛОГОТИП VeltisGroup                  */
+        /* ========================================= */
+
+        /* Убираем белые квадраты и делаем прозрачными */
+        .header-logo .site-logo img,
+        .header-logo-2 .site-logo img,
+        .footer-logo a img {
+        background: transparent !important;
+        mix-blend-mode: multiply; /* Магия: убирает белый фон с картинки */
+        }
+
+        /* Принудительно уменьшаем размер */
+        .header-logo img,
+        .header-logo-2 img {
+        max-height: 45px !important; /* Высота логотипа в шапке */
+        width: auto !important;
+        display: block;
+        }
+
+        .footer-logo img {
+        max-height: 35px !important; /* Высота логотипа в подвале */
+        width: auto !important;
+        }
+
+        /* Если логотип всё ещё слишком широкий на мобильных */
+        @@media (max-width: 768px) {
+        .header-logo img,
+        .header-logo-2 img {
+        max-height: 30px !important;
+        }
+        }
     </style>
 
     @RenderSection("Styles", required: false)
