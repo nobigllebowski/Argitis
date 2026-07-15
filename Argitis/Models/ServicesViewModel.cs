@@ -2,7 +2,7 @@
 {
     public class ServicesViewModel
     {
-        public string Title { get; set; } = "Services - GROUPE-ARGITIS";
+        public string Title { get; set; } = "Services - VELTISGROUP";
         public string MetaDescription { get; set; } = "We specialize in financial services for individuals and professionals.";
         public string MetaKeywords { get; set; } = "Finance, Loan, Personal loan, Home loan, Mortgage Loan, Auto Credit, Mortgage Credit, Education Financing, Loan information, Requested amount";
 
