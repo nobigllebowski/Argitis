@@ -42,21 +42,27 @@ namespace Argitis.Services
             // Для порта 465 замените StartTls на SslOnConnect
             try
             {
-                // Устанавливаем таймаут 10 секунд, чтобы не зависать навсегда
-                using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+                Console.WriteLine($"[LOG] Attempting to connect to {_settings.SmtpServer}:{_settings.SmtpPort}...");
 
+                using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
                 await client.ConnectAsync(_settings.SmtpServer, _settings.SmtpPort, SecureSocketOptions.StartTls, cts.Token);
+
+                Console.WriteLine($"[LOG] Connected! Authenticating...");
                 await client.AuthenticateAsync(_settings.SenderEmail, _settings.SenderPassword, cts.Token);
+
+                Console.WriteLine($"[LOG] Authenticated! Sending email...");
                 await client.SendAsync(message, cts.Token);
+
+                Console.WriteLine($"[LOG] Email sent successfully!");
                 await client.DisconnectAsync(true);
             }
             catch (Exception ex)
             {
-                // Логируем ошибку в консоль Render (Logs)
-                Console.WriteLine($"[EMAIL ERROR] {ex.Message}");
-                Console.WriteLine(ex.StackTrace);
+                Console.WriteLine($"[ERROR] CAUGHT EXCEPTION: {ex.GetType().FullName}");
+                Console.WriteLine($"[ERROR] Message: {ex.Message}");
+                Console.WriteLine($"[ERROR] StackTrace: {ex.StackTrace}");
 
-                // Пробрасываем ошибку дальше, чтобы браузер/контроллер её увидел
+                // Если это SocketException, вы увидите в логах
                 throw;
             }
         }
