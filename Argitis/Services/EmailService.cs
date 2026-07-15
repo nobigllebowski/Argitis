@@ -38,7 +38,7 @@ namespace Argitis.Services
 
             using var client = new SmtpClient();
             // ИЗМЕНЕНО: используем SslOnConnect для порта 465 (Namecheap)
-            await client.ConnectAsync(_settings.SmtpServer, _settings.SmtpPort, SecureSocketOptions.SslOnConnect);
+            await client.ConnectAsync(_settings.SmtpServer, _settings.SmtpPort, SecureSocketOptions.StartTls);
             await client.AuthenticateAsync(_settings.SenderEmail, _settings.SenderPassword);
             await client.SendAsync(message);
             await client.DisconnectAsync(true);
