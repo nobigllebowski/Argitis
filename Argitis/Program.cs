@@ -1,5 +1,6 @@
 using Argitis.Services;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -68,6 +69,20 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapStaticAssets();
+
+app.Use(async (context, next) =>
+{
+    var tempData = context.RequestServices.GetRequiredService<ITempDataDictionaryFactory>()
+        .GetTempData(context);
+
+    // Принудительно удаляем ключ, если он есть
+    tempData.Remove("SuccessMessageKey");
+    tempData.Remove("ContactSuccessMessage");
+    tempData.Remove("AppointmentSuccessMessage");
+
+    await next();
+});
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
