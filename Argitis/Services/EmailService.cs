@@ -37,11 +37,28 @@ namespace Argitis.Services
             message.Body = bodyBuilder.ToMessageBody();
 
             using var client = new SmtpClient();
-            // ИЗМЕНЕНО: используем SslOnConnect для порта 465 (Namecheap)
-            await client.ConnectAsync(_settings.SmtpServer, _settings.SmtpPort, SecureSocketOptions.StartTls);
-            await client.AuthenticateAsync(_settings.SenderEmail, _settings.SenderPassword);
-            await client.SendAsync(message);
-            await client.DisconnectAsync(true);
+
+            // Настройки подключения к Namecheap через порт 587 (TLS)
+            // Для порта 465 замените StartTls на SslOnConnect
+            try
+            {
+                // Устанавливаем таймаут 10 секунд, чтобы не зависать навсегда
+                using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+
+                await client.ConnectAsync(_settings.SmtpServer, _settings.SmtpPort, SecureSocketOptions.StartTls, cts.Token);
+                await client.AuthenticateAsync(_settings.SenderEmail, _settings.SenderPassword, cts.Token);
+                await client.SendAsync(message, cts.Token);
+                await client.DisconnectAsync(true);
+            }
+            catch (Exception ex)
+            {
+                // Логируем ошибку в консоль Render (Logs)
+                Console.WriteLine($"[EMAIL ERROR] {ex.Message}");
+                Console.WriteLine(ex.StackTrace);
+
+                // Пробрасываем ошибку дальше, чтобы браузер/контроллер её увидел
+                throw;
+            }
         }
 
         public string BuildAdminNotificationEmail(LoanConfirmationDto loan, string clientIp)
