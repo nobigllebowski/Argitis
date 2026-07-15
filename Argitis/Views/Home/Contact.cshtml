@@ -1,6 +1,6 @@
 ﻿@model Argitis.Models.ContactViewModel
-@using Microsoft.AspNetCore.Mvc.Localization
-@inject IViewLocalizer Localizer
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Argitis.Resources.Views.Home.Contact> Localizer
 
 @{
     ViewData["Title"] = $"{Localizer["HomeTitle"]} - VeltisGroup";

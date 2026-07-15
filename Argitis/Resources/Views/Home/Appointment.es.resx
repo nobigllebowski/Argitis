@@ -125,4 +125,7 @@
 	<data name="MonthlyFeeInfo" xml:space="preserve"><value>Las cuotas mensuales son</value></data>
 	<data name="AndTerm" xml:space="preserve"><value>y el plazo del préstamo es</value></data>
 	<data name="Months" xml:space="preserve"><value>meses</value></data>
+	<data name="AppointmentSuccessMessage" xml:space="preserve">
+    <value>¡Tu solicitud ha sido enviada con éxito!</value>
+  </data>
 </root>

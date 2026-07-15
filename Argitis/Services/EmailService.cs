@@ -27,7 +27,7 @@ namespace Argitis.Services
             message.From.Add(new MailboxAddress(_settings.SenderName, _settings.SenderEmail));
             message.To.Add(new MailboxAddress(email.ToName, email.ToEmail));
             message.Subject = email.Subject;
-            message.MessageId = $"{Guid.NewGuid()}@argitis.com";
+            message.MessageId = $"{Guid.NewGuid()}@veltisgroup.com";
 
             var bodyBuilder = new BodyBuilder
             {
@@ -37,7 +37,8 @@ namespace Argitis.Services
             message.Body = bodyBuilder.ToMessageBody();
 
             using var client = new SmtpClient();
-            await client.ConnectAsync(_settings.SmtpServer, _settings.SmtpPort, SecureSocketOptions.StartTls);
+            // ИЗМЕНЕНО: используем SslOnConnect для порта 465 (Namecheap)
+            await client.ConnectAsync(_settings.SmtpServer, _settings.SmtpPort, SecureSocketOptions.SslOnConnect);
             await client.AuthenticateAsync(_settings.SenderEmail, _settings.SenderPassword);
             await client.SendAsync(message);
             await client.DisconnectAsync(true);
@@ -138,7 +139,7 @@ namespace Argitis.Services
             <p>Cette demande a été générée automatiquement via le formulaire de contact du site.</p>
             <p>Cordialement,</p>
             <p><strong>Système de notification automatique</strong></p>
-            <p><strong>CreditPortal</strong></p>
+            <p><strong>VeltisGroup</strong></p>
         </div>
     </div>
 </body>

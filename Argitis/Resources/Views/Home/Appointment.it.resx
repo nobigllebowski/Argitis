@@ -125,4 +125,7 @@
 	<data name="MonthlyFeeInfo" xml:space="preserve"><value>Le rate mensili sono</value></data>
 	<data name="AndTerm" xml:space="preserve"><value>e la durata del prestito è</value></data>
 	<data name="Months" xml:space="preserve"><value>mesi</value></data>
+	<data name="AppointmentSuccessMessage" xml:space="preserve">
+    <value>La tua richiesta è stata inviata con successo!</value>
+  </data>
 </root>

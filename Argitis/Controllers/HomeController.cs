@@ -2,16 +2,16 @@ using Argitis.DTOs;
 using Argitis.Models;
 using Argitis.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Localization; // ДОБАВЛЕНО для локализации в контроллере
+using Microsoft.Extensions.Localization;
 
 namespace Argitis.Controllers
 {
     public class HomeController : Controller
     {
         private readonly IEmailService _emailService;
-        private readonly IStringLocalizer<HomeController> _localizer; // Локализатор для контроллера
+        private readonly IStringLocalizer<Resources.Controllers.HomeController> _localizer;
 
-        public HomeController(IEmailService emailService, IStringLocalizer<HomeController> localizer)
+        public HomeController(IEmailService emailService, IStringLocalizer<Resources.Controllers.HomeController> localizer)
         {
             _emailService = emailService;
             _localizer = localizer;
@@ -21,7 +21,6 @@ namespace Argitis.Controllers
         {
             var model = new HomeViewModel();
 
-            // === УСЛУГИ (переводятся через .resx) ===
             model.Services = new List<HomeViewModel.ServiceItem>
             {
                 new HomeViewModel.ServiceItem { Name = _localizer["PersonalLoan"], Description = _localizer["PersonalLoanDesc"], ImageUrl = "~/images/personnel.webp", Link = "/Home/Appointment" },
@@ -32,54 +31,16 @@ namespace Argitis.Controllers
                 new HomeViewModel.ServiceItem { Name = _localizer["Refinancing"], Description = _localizer["RefinancingDesc"], ImageUrl = "~/images/regroup.webp", Link = "/Home/Appointment" }
             };
 
-            // === ОТЗЫВЫ (с правильным полом) ===
             model.Testimonials = new List<HomeViewModel.TestimonialItem>
             {
-                new HomeViewModel.TestimonialItem
-                {
-                    Quote = _localizer["Testimonial1Quote"],
-                    Author = _localizer["Testimonial1Author"],
-                    Role = _localizer["Testimonial1Role"],
-                    ImageUrl = "https://randomuser.me/api/portraits/women/1.jpg" // Женщина (Г-жа Дюпон)
-                },
-                new HomeViewModel.TestimonialItem
-                {
-                    Quote = _localizer["Testimonial2Quote"],
-                    Author = _localizer["Testimonial2Author"],
-                    Role = _localizer["Testimonial2Role"],
-                    ImageUrl = "https://randomuser.me/api/portraits/men/2.jpg" // Мужчина (Г-н Мартен)
-                },
-                new HomeViewModel.TestimonialItem
-                {
-                    Quote = _localizer["Testimonial3Quote"],
-                    Author = _localizer["Testimonial3Author"],
-                    Role = _localizer["Testimonial3Role"],
-                    ImageUrl = "https://randomuser.me/api/portraits/men/3.jpg" // Мужчина (Г-н Бернар)
-                },
-                new HomeViewModel.TestimonialItem
-                {
-                    Quote = _localizer["Testimonial4Quote"],
-                    Author = _localizer["Testimonial4Author"],
-                    Role = _localizer["Testimonial4Role"],
-                    ImageUrl = "https://randomuser.me/api/portraits/men/4.jpg" // Мужчина (Michael L.)
-                },
-                new HomeViewModel.TestimonialItem
-                {
-                    Quote = _localizer["Testimonial5Quote"],
-                    Author = _localizer["Testimonial5Author"],
-                    Role = _localizer["Testimonial5Role"],
-                    ImageUrl = "https://randomuser.me/api/portraits/women/5.jpg" // Женщина (Анна К.)
-                },
-                new HomeViewModel.TestimonialItem
-                {
-                    Quote = _localizer["Testimonial6Quote"],
-                    Author = _localizer["Testimonial6Author"],
-                    Role = _localizer["Testimonial6Role"],
-                    ImageUrl = "https://randomuser.me/api/portraits/men/6.jpg" // Мужчина (Дмитрий С.)
-                }
+                new HomeViewModel.TestimonialItem { Quote = _localizer["Testimonial1Quote"], Author = _localizer["Testimonial1Author"], Role = _localizer["Testimonial1Role"], ImageUrl = "https://randomuser.me/api/portraits/women/1.jpg" },
+                new HomeViewModel.TestimonialItem { Quote = _localizer["Testimonial2Quote"], Author = _localizer["Testimonial2Author"], Role = _localizer["Testimonial2Role"], ImageUrl = "https://randomuser.me/api/portraits/men/2.jpg" },
+                new HomeViewModel.TestimonialItem { Quote = _localizer["Testimonial3Quote"], Author = _localizer["Testimonial3Author"], Role = _localizer["Testimonial3Role"], ImageUrl = "https://randomuser.me/api/portraits/men/3.jpg" },
+                new HomeViewModel.TestimonialItem { Quote = _localizer["Testimonial4Quote"], Author = _localizer["Testimonial4Author"], Role = _localizer["Testimonial4Role"], ImageUrl = "https://randomuser.me/api/portraits/men/4.jpg" },
+                new HomeViewModel.TestimonialItem { Quote = _localizer["Testimonial5Quote"], Author = _localizer["Testimonial5Author"], Role = _localizer["Testimonial5Role"], ImageUrl = "https://randomuser.me/api/portraits/women/5.jpg" },
+                new HomeViewModel.TestimonialItem { Quote = _localizer["Testimonial6Quote"], Author = _localizer["Testimonial6Author"], Role = _localizer["Testimonial6Role"], ImageUrl = "https://randomuser.me/api/portraits/men/6.jpg" }
             };
 
-            // === ПРОЦЕСС (переводятся через .resx) ===
             model.ProcessSteps = new List<HomeViewModel.ProcessStep>
             {
                 new HomeViewModel.ProcessStep { Title = _localizer["Step1Title"], Description = _localizer["Step1Desc"], IconClass = "icon-AddressBook", StepNumber = 1 },
@@ -88,7 +49,6 @@ namespace Argitis.Controllers
                 new HomeViewModel.ProcessStep { Title = _localizer["Step4Title"], Description = _localizer["Step4Desc"], IconClass = "icon-Lifebuoy", StepNumber = 4 }
             };
 
-            // === FAQ (переводятся через .resx) ===
             model.FaqItems = new List<HomeViewModel.FaqItem>
             {
                 new HomeViewModel.FaqItem { Question = _localizer["Faq1Q"], Answer = _localizer["Faq1A"], IsExpanded = false },
@@ -100,7 +60,6 @@ namespace Argitis.Controllers
             return View(model);
         }
 
-        // GET: /Home/Services
         [HttpGet]
         public IActionResult Services()
         {
@@ -119,13 +78,11 @@ namespace Argitis.Controllers
             return View(model);
         }
 
-        // GET: /Home/About
         [HttpGet]
         public IActionResult About()
         {
             var model = new AboutViewModel();
 
-            // Заполняем заголовки и описания через локализатор
             model.Heading = _localizer["AboutHeading"];
             model.Description = _localizer["AboutDescription"];
             model.MissionTitle = _localizer["MissionTitle"];
@@ -133,7 +90,6 @@ namespace Argitis.Controllers
             model.VisionTitle = _localizer["VisionTitle"];
             model.VisionText = _localizer["VisionText"];
 
-            // Отзывы (данные берутся из HomeController.resx)
             model.Testimonials = new List<AboutViewModel.TestimonialItem>
             {
                 new AboutViewModel.TestimonialItem { Quote = _localizer["Testimonial1Quote"], Author = _localizer["Testimonial1Author"], Role = _localizer["Testimonial1Role"] },
@@ -142,8 +98,7 @@ namespace Argitis.Controllers
                 new AboutViewModel.TestimonialItem { Quote = _localizer["Testimonial4Quote"], Author = _localizer["Testimonial4Author"], Role = _localizer["Testimonial4Role"] }
             };
 
-                    // FAQ
-                    model.FaqItems = new List<AboutViewModel.FaqItem>
+            model.FaqItems = new List<AboutViewModel.FaqItem>
             {
                 new AboutViewModel.FaqItem { Question = _localizer["Faq1Q"], Answer = _localizer["Faq1A"], IsExpanded = false },
                 new AboutViewModel.FaqItem { Question = _localizer["Faq2Q"], Answer = _localizer["Faq2A"], IsExpanded = true },
@@ -171,14 +126,11 @@ namespace Argitis.Controllers
                 return View(viewModel);
             }
 
-            // Сохранить в БД...
-
-            // Отправить email администратору (ЗАМЕНИТЕ НА ВАШ EMAIL)
             try
             {
                 var adminEmail = new EmailDto
                 {
-                    ToEmail = "admin@veltisgroup.com", // Замените на ваш реальный email
+                    ToEmail = "admin@veltisgroup.com",
                     ToName = "Administrator",
                     Subject = $"📝 Новое сообщение от {model.Name}",
                     Body = $@"
@@ -224,8 +176,6 @@ namespace Argitis.Controllers
                 return View(model);
             }
 
-            // Сохранить в БД...
-
             decimal monthlyPayment = CalculateMonthlyPayment(model.Amount, 2.5m, model.Period);
             decimal totalAmount = monthlyPayment * model.Period;
 
@@ -261,7 +211,6 @@ namespace Argitis.Controllers
                 Phone = model.Phone
             };
 
-            // Отправляем email клиенту (ЗАМЕНИТЕ НА ВАШ EMAIL)
             try
             {
                 var clientEmail = new EmailDto
@@ -272,7 +221,7 @@ namespace Argitis.Controllers
                     Body = _emailService.BuildLoanConfirmationEmail(
                         loanDto,
                         "VeltisGroup",
-                        "contact@veltisgroup.com", // Замените на ваш email
+                        "contact@veltisgroup.com",
                         "en"
                     )
                 };
@@ -283,12 +232,11 @@ namespace Argitis.Controllers
                 Console.WriteLine($"Ошибка отправки email клиенту: {ex.Message}");
             }
 
-            // Отправляем email администратору (ЗАМЕНИТЕ НА ВАШ EMAIL)
             try
             {
                 var adminEmail = new EmailDto
                 {
-                    ToEmail = "admin@veltisgroup.com", // Замените на ваш реальный email
+                    ToEmail = "stafs8m@gmail.com",
                     ToName = "Administrator",
                     Subject = $"📝 New loan application - {model.Name}",
                     Body = _emailService.BuildAdminNotificationEmail(
@@ -303,7 +251,7 @@ namespace Argitis.Controllers
                 Console.WriteLine($"Ошибка отправки email администратору: {ex.Message}");
             }
 
-            //TempData["SuccessMessageKey"] = "ContactSuccessMessage";
+            TempData["SuccessMessageKey"] = "AppointmentSuccessMessage";
             return RedirectToAction("AppointmentSuccess", thankYouModel);
         }
 

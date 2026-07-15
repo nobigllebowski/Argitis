@@ -125,4 +125,7 @@
 	<data name="MonthlyFeeInfo" xml:space="preserve"><value>Die monatlichen Gebühren betragen</value></data>
 	<data name="AndTerm" xml:space="preserve"><value>und die Kreditlaufzeit beträgt</value></data>
 	<data name="Months" xml:space="preserve"><value>Monate</value></data>
+	<data name="AppointmentSuccessMessage" xml:space="preserve">
+    <value>Ihre Anfrage wurde erfolgreich gesendet!</value>
+  </data>
 </root>

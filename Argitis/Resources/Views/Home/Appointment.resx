@@ -185,4 +185,7 @@
 	<data name="Months" xml:space="preserve">
     <value>months</value>
   </data>
+	<data name="AppointmentSuccessMessage" xml:space="preserve">
+    <value>Your application has been sent successfully!</value>
+  </data>
 </root>

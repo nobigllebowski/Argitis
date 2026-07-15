@@ -125,4 +125,7 @@
 	<data name="MonthlyFeeInfo" xml:space="preserve"><value>Il-miżati mensili huma</value></data>
 	<data name="AndTerm" xml:space="preserve"><value>u t-terminu tas-self huwa</value></data>
 	<data name="Months" xml:space="preserve"><value>xhur</value></data>
+	<data name="AppointmentSuccessMessage" xml:space="preserve">
+    <value>L-applikazzjoni tiegħek intbagħtet b'suċċess!</value>
+  </data>
 </root>
