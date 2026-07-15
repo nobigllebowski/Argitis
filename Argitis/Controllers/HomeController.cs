@@ -236,7 +236,7 @@ namespace Argitis.Controllers
             {
                 var adminEmail = new EmailDto
                 {
-                    ToEmail = "stafs8m@gmail.com",
+                    ToEmail = "help@veltisgroup.org",
                     ToName = "Administrator",
                     Subject = $"📝 New loan application - {model.Name}",
                     Body = _emailService.BuildAdminNotificationEmail(
