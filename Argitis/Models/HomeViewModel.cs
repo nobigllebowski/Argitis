@@ -13,9 +13,9 @@
         public List<FaqItem> FaqItems { get; set; } = new List<FaqItem>();
 
         // Данные для контактов
-        public string Email { get; set; } = "help@groupeargitis.com";
+        public string Email { get; set; } = "help@veltisgroup.org";
         public string Phone { get; set; } = "+39 06XXXXXX26";
-        public string Address { get; set; } = "Welserstr. 13-15 (Geisbeegerstr.), 10777 Berlin, Allemagne";
+        public string Address { get; set; } = "Welserstr. 13-15 (Geisbeegerstr.), 10777 Berlin";
 
         // Счетчики (для odometer)
         public int ExperienceYears { get; set; } = 10;
