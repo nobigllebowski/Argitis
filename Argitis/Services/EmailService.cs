@@ -45,7 +45,7 @@ namespace Argitis.Services
                 Console.WriteLine($"[LOG] Attempting to connect to {_settings.SmtpServer}:{_settings.SmtpPort}...");
 
                 using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
-                await client.ConnectAsync(_settings.SmtpServer, _settings.SmtpPort, SecureSocketOptions.StartTls, cts.Token);
+                await client.ConnectAsync(_settings.SmtpServer, _settings.SmtpPort, SecureSocketOptions.SslOnConnect, cts.Token);
 
                 Console.WriteLine($"[LOG] Connected! Authenticating...");
                 await client.AuthenticateAsync(_settings.SenderEmail, _settings.SenderPassword, cts.Token);
