@@ -471,8 +471,8 @@
 
                             <div class="cols mb-20">
                                 <div class="select-custom">
-                                    <select asp-for="Country" id="country" class="tf-select" data-default="">
-                                        <option value="---">@Localizer["SelectCountry"]</option>
+                                    <select asp-for="Country" id="country" class="tf-select" data-default="" required>
+                                        <option value="">@Localizer["SelectCountry"]</option>
                                         <option value="Allemagne">Allemagne</option>
                                         <option value="France">France</option>
                                         <option value="Néerlande">Néerlande</option>
