@@ -169,4 +169,10 @@
 	<data name="VisionText" xml:space="preserve">
     <value>Byť dôveryhodným partnerom, ktorý pomáha svojim klientom rozvíjať sa ponukou kvalitných finančných služieb.</value>
 </data>
+	<data name="LanguageCode" xml:space="preserve">
+    <value>sk</value>
+</data>
+	<data name="ClientEmailSubject" xml:space="preserve">
+    <value>✅ Vaša žiadosť o úver bola prijatá - VeltisGroup</value>
+</data>
 </root>

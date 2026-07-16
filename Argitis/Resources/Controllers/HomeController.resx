@@ -263,4 +263,10 @@
 	<data name="VisionText" xml:space="preserve">
     <value>To be a trusted partner who helps their clients develop by offering quality financial services.</value>
 </data>
+	<data name="LanguageCode" xml:space="preserve">
+    <value>en</value>
+</data>
+	<data name="ClientEmailSubject" xml:space="preserve">
+    <value>✅ Your loan application has been received - VeltisGroup</value>
+</data>
 </root>

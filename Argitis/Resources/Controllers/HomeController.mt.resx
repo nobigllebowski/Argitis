@@ -168,4 +168,10 @@
 	<data name="VisionText" xml:space="preserve">
     <value>Li nkunu sieħeb ta' fiduċja li jgħin lill-klijenti tiegħu jiżviluppaw billi joffri servizzi finanzjarji ta' kwalità.</value>
 </data>
+	<data name="LanguageCode" xml:space="preserve">
+    <value>mt</value>
+</data>
+	<data name="ClientEmailSubject" xml:space="preserve">
+    <value>✅ It-talba tiegħek għas-self ġiet riċevuta - VeltisGroup</value>
+</data>
 </root>

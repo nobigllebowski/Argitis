@@ -168,4 +168,10 @@
 	<data name="VisionText" xml:space="preserve">
     <value>Să fim un partener de încredere care își ajută clienții să se dezvolte oferind servicii financiare de calitate.</value>
 </data>
+	<data name="LanguageCode" xml:space="preserve">
+    <value>ro</value>
+</data>
+	<data name="ClientEmailSubject" xml:space="preserve">
+    <value>✅ Cererea dumneavoastră de împrumut a fost primită - VeltisGroup</value>
+</data>
 </root>

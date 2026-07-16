@@ -168,4 +168,10 @@
 	<data name="VisionText" xml:space="preserve">
     <value>Een vertrouwde partner zijn die zijn klanten helpt zich te ontwikkelen door kwalitatieve financiële diensten aan te bieden.</value>
 </data>
+	<data name="LanguageCode" xml:space="preserve">
+    <value>nl</value>
+</data>
+	<data name="ClientEmailSubject" xml:space="preserve">
+    <value>✅ Uw leningaanvraag is ontvangen - VeltisGroup</value>
+</data>
 </root>

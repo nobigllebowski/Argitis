@@ -168,4 +168,10 @@
 	<data name="VisionText" xml:space="preserve">
     <value>Būt uzticamam partnerim, kas palīdz saviem klientiem attīstīties, piedāvājot kvalitatīvus finanšu pakalpojumus.</value>
 </data>
+	<data name="LanguageCode" xml:space="preserve">
+    <value>lv</value>
+</data>
+	<data name="ClientEmailSubject" xml:space="preserve">
+    <value>✅ Jūsu aizdevuma pieteikums ir saņemts - VeltisGroup</value>
+</data>
 </root>

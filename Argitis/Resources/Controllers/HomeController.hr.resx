@@ -168,4 +168,10 @@
 	<data name="VisionText" xml:space="preserve">
     <value>Biti pouzdan partner koji pomaže svojim klijentima da se razvijaju nudeći kvalitetne financijske usluge.</value>
 </data>
+	<data name="LanguageCode" xml:space="preserve">
+    <value>hr</value>
+</data>
+	<data name="ClientEmailSubject" xml:space="preserve">
+    <value>✅ Vaš zahtjev za kredit je zaprimljen - VeltisGroup</value>
+</data>
 </root>

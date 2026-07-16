@@ -168,4 +168,10 @@
 	<data name="VisionText" xml:space="preserve">
     <value>Olla luotettava kumppani, joka auttaa asiakkaitaan kehittymään tarjoamalla laadukkaita rahoituspalveluja.</value>
 </data>
+	<data name="LanguageCode" xml:space="preserve">
+    <value>fi</value>
+</data>
+	<data name="ClientEmailSubject" xml:space="preserve">
+    <value>✅ Lainahakemuksesi on vastaanotettu - VeltisGroup</value>
+</data>
 </root>

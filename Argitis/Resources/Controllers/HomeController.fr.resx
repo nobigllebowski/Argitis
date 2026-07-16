@@ -168,4 +168,10 @@
 	<data name="VisionText" xml:space="preserve">
     <value>Être un partenaire de confiance qui aide ses clients à se développer en offrant des services financiers de qualité.</value>
 </data>
+	<data name="LanguageCode" xml:space="preserve">
+    <value>fr</value>
+</data>
+	<data name="ClientEmailSubject" xml:space="preserve">
+    <value>✅ Votre demande de prêt a bien été reçue - VeltisGroup</value>
+</data>
 </root>

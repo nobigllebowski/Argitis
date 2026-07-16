@@ -130,17 +130,17 @@ namespace Argitis.Controllers
             {
                 var adminEmail = new EmailDto
                 {
-                    ToEmail = "admin@veltisgroup.com",
+                    ToEmail = "help@veltisgroup.org",
                     ToName = "Administrator",
-                    Subject = $"📝 Новое сообщение от {model.Name}",
+                    Subject = "📝 Nouveau message depuis le formulaire de contact",
                     Body = $@"
-                        <h2>Новое сообщение из формы контакта</h2>
-                        <p><strong>Имя:</strong> {model.Name}</p>
-                        <p><strong>Email:</strong> {model.Email}</p>
-                        <p><strong>Телефон:</strong> {model.Phone}</p>
-                        <p><strong>Сообщение:</strong></p>
+                        <h2>Nouveau message depuis le formulaire de contact</h2>
+                        <p><strong>Nom :</strong> {model.Name}</p>
+                        <p><strong>E-mail :</strong> {model.Email}</p>
+                        <p><strong>Téléphone :</strong> {model.Phone}</p>
+                        <p><strong>Message :</strong></p>
                         <p>{model.Message}</p>
-                        <p><strong>Дата:</strong> {DateTime.Now:dd.MM.yyyy HH:mm}</p>
+                        <p><strong>Date :</strong> {DateTime.Now:dd/MM/yyyy HH:mm}</p>
                     "
                 };
                 await _emailService.SendEmailAsync(adminEmail);
@@ -195,7 +195,7 @@ namespace Argitis.Controllers
                 InterestRate = 2.5m,
                 MonthlyPayment = monthlyPayment,
                 TotalAmount = totalAmount,
-                Language = "en"
+                Language = _localizer["LanguageCode"] // <--- Язык клиента (динамически из ресурсов)
             };
 
             var thankYouModel = new ThankYouViewModel
@@ -217,12 +217,12 @@ namespace Argitis.Controllers
                 {
                     ToEmail = model.Email,
                     ToName = model.Name,
-                    Subject = "✅ Your loan application has been received - VeltisGroup",
+                    Subject = _localizer["ClientEmailSubject"], // <--- Локализованная тема для клиента
                     Body = _emailService.BuildLoanConfirmationEmail(
                         loanDto,
                         "VeltisGroup",
                         "contact@veltisgroup.com",
-                        "en"
+                        loanDto.Language
                     )
                 };
                 await _emailService.SendEmailAsync(clientEmail);
@@ -238,7 +238,7 @@ namespace Argitis.Controllers
                 {
                     ToEmail = "help@veltisgroup.org",
                     ToName = "Administrator",
-                    Subject = $"📝 New loan application - {model.Name}",
+                    Subject = $"📝 Nouvelle demande de prêt - {model.Name}",
                     Body = _emailService.BuildAdminNotificationEmail(
                         loanDto,
                         HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown"
