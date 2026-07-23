@@ -161,4 +161,10 @@
 	<data name="ContactUs" xml:space="preserve">
     <value>Contactați-ne</value>
   </data>
+	<data name="Month_Singular" xml:space="preserve">
+    <value>lună</value>
+</data>
+	<data name="Month_Plural" xml:space="preserve">
+    <value>luni</value>
+</data>
 </root>

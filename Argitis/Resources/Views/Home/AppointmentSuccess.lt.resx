@@ -161,4 +161,10 @@
 	<data name="ContactUs" xml:space="preserve">
     <value>Susisiekite su mumis</value>
   </data>
+	<data name="Month_Singular" xml:space="preserve">
+    <value>mėnuo</value>
+</data>
+	<data name="Month_Plural" xml:space="preserve">
+    <value>mėnesių</value>
+</data>
 </root>

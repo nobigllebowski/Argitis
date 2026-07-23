@@ -16,6 +16,6 @@
         public string FormattedAmount => $"{Amount:N0} {Currency}";
         public string FormattedMonthlyPayment => $"{MonthlyPayment:N2} {Currency}";
         public string FormattedTotalAmount => $"{TotalAmount:N2} {Currency}";
-        public string FormattedPeriod => $"{Period} {(Period == 1 ? "Месяц" : Period < 5 ? "Месяца" : "Месяцев")}";
+        public string FormattedPeriod => $"{Period}"; // Только число
     }
 }

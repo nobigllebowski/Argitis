@@ -161,4 +161,10 @@
 	<data name="ContactUs" xml:space="preserve">
     <value>Ikkuntattjana</value>
   </data>
+	<data name="Month_Singular" xml:space="preserve">
+    <value>xahar</value>
+</data>
+	<data name="Month_Plural" xml:space="preserve">
+    <value>xhur</value>
+</data>
 </root>

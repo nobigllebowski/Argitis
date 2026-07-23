@@ -161,4 +161,10 @@
 	<data name="ContactUs" xml:space="preserve">
     <value>Ota yhteyttä</value>
   </data>
+	<data name="Month_Singular" xml:space="preserve">
+    <value>kuukausi</value>
+</data>
+	<data name="Month_Plural" xml:space="preserve">
+    <value>kuukautta</value>
+</data>
 </root>

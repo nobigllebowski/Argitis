@@ -161,4 +161,10 @@
 	<data name="ContactUs" xml:space="preserve">
     <value>Neem contact met ons op</value>
   </data>
+	<data name="Month_Singular" xml:space="preserve">
+    <value>maand</value>
+</data>
+	<data name="Month_Plural" xml:space="preserve">
+    <value>maanden</value>
+</data>
 </root>

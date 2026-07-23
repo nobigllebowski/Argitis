@@ -161,4 +161,10 @@
 	<data name="ContactUs" xml:space="preserve">
     <value>Sazinieties ar mums</value>
   </data>
+	<data name="Month_Singular" xml:space="preserve">
+    <value>mēnesis</value>
+</data>
+	<data name="Month_Plural" xml:space="preserve">
+    <value>mēnešu</value>
+</data>
 </root>

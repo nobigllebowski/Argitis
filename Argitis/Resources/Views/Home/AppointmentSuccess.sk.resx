@@ -161,4 +161,10 @@
 	<data name="ContactUs" xml:space="preserve">
     <value>Kontaktujte nás</value>
   </data>
+	<data name="Month_Singular" xml:space="preserve">
+    <value>mesiac</value>
+</data>
+	<data name="Month_Plural" xml:space="preserve">
+    <value>mesiacov</value>
+</data>
 </root>

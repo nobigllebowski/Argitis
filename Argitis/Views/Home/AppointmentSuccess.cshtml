@@ -309,7 +309,9 @@
 
                                 <div class="detail-item">
                                     <span class="detail-label">@Localizer["TermLabel"]</span>
-                                    <span class="detail-value">@Model.FormattedPeriod</span>
+                                    <span class="detail-value">
+                                        @Model.Period @Localizer[Model.Period == 1 ? "Month_Singular" : "Month_Plural"]
+                                    </span>
                                 </div>
 
                                 <div class="detail-item">

@@ -119,4 +119,10 @@
 	<data name="OurContactsTitle" xml:space="preserve"><value>Nos contacts</value></data>
 	<data name="BackToHome" xml:space="preserve"><value>Retour à l'accueil</value></data>
 	<data name="ContactUs" xml:space="preserve"><value>Contactez-nous</value></data>
+	<data name="Month_Singular" xml:space="preserve">
+    <value>mois</value>
+</data>
+	<data name="Month_Plural" xml:space="preserve">
+    <value>mois</value>
+</data>
 </root>
